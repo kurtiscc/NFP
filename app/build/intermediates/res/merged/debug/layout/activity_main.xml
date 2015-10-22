@@ -22,7 +22,12 @@
         android:layout_height="wrap_content"
         android:id="@+id/testLng"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/testUID" />
+
     </LinearLayout>
 
 </LinearLayout>
-<!-- From: file:/C:/Users/christensenkc/Documents/AndroidStudioProjects/NFP/app/src/main/res/layout/activity_main.xml -->
+<!-- From: file:/C:/Users/Philip/StudioProjects/NFP/app/src/main/res/layout/activity_main.xml -->
