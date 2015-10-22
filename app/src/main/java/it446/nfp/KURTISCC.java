@@ -6,7 +6,7 @@ package it446.nfp;
 public class KURTISCC {
 
 
-    // THIS IS ME MAKING CHANGES TO THE FILE FOR THE FIRST TIME
+
 }
 
 
