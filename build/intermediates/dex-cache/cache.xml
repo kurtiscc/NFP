@@ -2,32 +2,32 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\christensenkc\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jar="C:\Users\Philip.Jones\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="C:\Users\christensenkc\Documents\AndroidStudioProjects\NFP\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-07a5421d80f46e185dcb197ac7381c49e8396729.jar" />
+        <dex dex="C:\Users\Philip.Jones\Dropbox\School_F15\IT446Capstone\T420GitRepo\NFP\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-8f2d2e54b69bd2bb8fecd1702c731c2bc7499384.jar" />
     </item>
     <item
-        jar="C:\Users\christensenkc\Documents\AndroidStudioProjects\NFP\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jar="C:\Users\Philip.Jones\Dropbox\School_F15\IT446Capstone\T420GitRepo\NFP\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="C:\Users\christensenkc\Documents\AndroidStudioProjects\NFP\app\build\intermediates\pre-dexed\debug\classes-079013ba3541c099860eb9c3342e873ab1bcb7a0.jar" />
+        <dex dex="C:\Users\Philip.Jones\Dropbox\School_F15\IT446Capstone\T420GitRepo\NFP\app\build\intermediates\pre-dexed\debug\classes-12cb6de3b19f39ac2a5b0d817c2b1f1d99759661.jar" />
     </item>
     <item
-        jar="C:\Users\christensenkc\Documents\AndroidStudioProjects\NFP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="C:\Users\christensenkc\Documents\AndroidStudioProjects\NFP\app\build\intermediates\pre-dexed\debug\classes-bcb37e9be00565e11c6ffc23343e72ab128445ca.jar" />
-    </item>
-    <item
-        jar="C:\Users\christensenkc\Documents\AndroidStudioProjects\NFP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jar="C:\Users\Philip.Jones\Dropbox\School_F15\IT446Capstone\T420GitRepo\NFP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="C:\Users\christensenkc\Documents\AndroidStudioProjects\NFP\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-1955520069f6d59fa42e4118ae78e510c8cee656.jar" />
+        <dex dex="C:\Users\Philip.Jones\Dropbox\School_F15\IT446Capstone\T420GitRepo\NFP\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-8762cfbdb705551cd8e2da32ee15db1147b0b85a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Philip.Jones\Dropbox\School_F15\IT446Capstone\T420GitRepo\NFP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="C:\Users\Philip.Jones\Dropbox\School_F15\IT446Capstone\T420GitRepo\NFP\app\build\intermediates\pre-dexed\debug\classes-8a99b16e3efc93d0c97fbe0f3458204c04e0a973.jar" />
     </item>
 
 </items>
