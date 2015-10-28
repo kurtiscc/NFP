@@ -168,11 +168,7 @@ public class MainActivity extends AppCompatActivity {
         testLat.setText(String.valueOf(lat));
         testLng.setText(String.valueOf(lng));
 
-
-        //card_details = (EditText) findViewById(R.id.editText);(TextView)findViewById(R.id.testUID))
-
         nfcAdapter = NfcAdapter.getDefaultAdapter(this);
-
 
         final Button scanTagButton = (Button) findViewById(R.id.scanTag);
         scanTagButton.setBackgroundColor(0xff888888);
@@ -247,21 +243,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-//    @Override
-//    protected void onResume() {
-//        super.onResume();
-//        // creating pending intent:
-//        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, new Intent(this, getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), 0);
-//        // creating intent receiver for NFC events:
-//        IntentFilter filter = new IntentFilter();
-//        filter.addAction(NfcAdapter.ACTION_TAG_DISCOVERED);
-//        filter.addAction(NfcAdapter.ACTION_NDEF_DISCOVERED);
-//        filter.addAction(NfcAdapter.ACTION_TECH_DISCOVERED);
-//        // enabling foreground dispatch for getting intent from NFC event:
-//        NfcAdapter nfcAdapter = NfcAdapter.getDefaultAdapter(this);
-//        nfcAdapter.enableForegroundDispatch(this, pendingIntent, new IntentFilter[]{filter}, this.techList);
-//    }
-
     @Override
     protected void onResume() {
         super.onResume();
@@ -280,15 +261,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
-
-//    @Override
-//    protected void onPause() {
-//        super.onPause();
-//        // disabling foreground dispatch:
-//        NfcAdapter nfcAdapter = NfcAdapter.getDefaultAdapter(this);
-//        nfcAdapter.disableForegroundDispatch(this);
-//    }
     @Override
     protected void onPause() {
 
@@ -298,18 +270,6 @@ public class MainActivity extends AppCompatActivity {
 
         super.onPause();
     }
-
-
-
-//    @Override
-//    protected void onNewIntent(Intent intent) {
-//        if (intent.getAction().equals(NfcAdapter.ACTION_TAG_DISCOVERED)) {
-//            ((TextView)findViewById(R.id.testUID)).setText(
-//                    "NFC Tag\n" +
-//                            ByteArrayToHexString(intent.getByteArrayExtra(NfcAdapter.EXTRA_ID)));
-//        }
-//    }
-
 
     @Override
     public void onNewIntent(Intent intent) {
