@@ -10,6 +10,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get Info"
+            android:id="@+id/getinfo"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -23,12 +28,14 @@
         android:layout_height="wrap_content"
         android:id="@+id/testLng"/>
 
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/testUID"
             android:text="UID = Nothing Scanned"
             android:textColor="#1b1fe7" />
+
 
         <Button
             android:layout_width="174dp"
@@ -39,7 +46,13 @@
             android:enabled="true"
             android:background="#57e93a" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/testAddressString"/>
+
+
     </LinearLayout>
 
 </LinearLayout>
-<!-- From: file:/C:/Users/Philip.Jones/Dropbox/School_F15/IT446Capstone/T420GitRepo/NFP/app/src/main/res/layout/activity_main.xml -->
+<!-- From: file:/C:/Users/christensenkc/Documents/AndroidStudioProjects/NFP/app/src/main/res/layout/activity_main.xml -->

@@ -37,6 +37,12 @@ import android.nfc.tech.NfcF;
 import android.nfc.tech.NfcV;
 import android.util.Log;
 
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.VolleyLog;
+import com.android.volley.toolbox.JsonObjectRequest;
+
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.DataInputStream;
@@ -49,21 +55,28 @@ import java.net.URLConnection;
 import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
+    private static String addressString = "No address found";
+    private static String currentTimeStamp;
     public static Double lat;
     public static Double lng;
     TextView testTimeStamp;
     TextView testLat;
     TextView testLng;
     TextView testUID;
+    Button getInfo;
     Button scanTag;
     private boolean isToScan = false;
     PendingIntent pendingIntent;
     NfcAdapter nfcAdapter;
     IntentFilter[] intentFiltersArray;
+
+
+    TextView testAddressString;
 
 
     // list of NFC technologies detected:
@@ -79,16 +92,14 @@ public class MainActivity extends AppCompatActivity {
             }
     };
 
-
     /**
-     *
      * @return yyyy-MM-dd HH:mm:ss formate date as string
      */
-    public static String getCurrentTimeStamp(){
+    public static String getCurrentTimeStamp() {
         try {
 
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSZ");
-            String currentTimeStamp = dateFormat.format(new Date()); // Find todays date
+            currentTimeStamp = dateFormat.format(new Date()); // Find todays date
 
             return currentTimeStamp;
         } catch (Exception e) {
@@ -103,10 +114,15 @@ public class MainActivity extends AppCompatActivity {
             updateWithNewLocation(location);
         }
 
-        public void onProviderDisabled(String provider) {}
-        public void onProviderEnabled(String provider) {}
+        public void onProviderDisabled(String provider) {
+        }
+
+        public void onProviderEnabled(String provider) {
+        }
+
         public void onStatusChanged(String provider, int status,
-                                    Bundle extras) {}
+                                    Bundle extras) {
+        }
     };
 
     private void updateWithNewLocation(Location location) {
@@ -114,8 +130,26 @@ public class MainActivity extends AppCompatActivity {
         if (location != null) {
             lat = location.getLatitude();
             lng = location.getLongitude();
+
+            double latitude = location.getLatitude();
+            double longitude = location.getLongitude();
+            Geocoder gc = new Geocoder(this, Locale.getDefault());
+
+            try {
+                List<Address> addresses = gc.getFromLocation(latitude, longitude, 1);
+                StringBuilder sb = new StringBuilder();
+                if (addresses.size() > 0) {
+                    Address address = addresses.get(0);
+
+                    for (int i = 0; i < address.getMaxAddressLineIndex(); i++)
+                        sb.append(address.getAddressLine(i)).append("\n");
+                }
+                addressString = sb.toString();
+            } catch (IOException e) {
+            }
         }
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -124,10 +158,13 @@ public class MainActivity extends AppCompatActivity {
         testTimeStamp = (TextView) findViewById(R.id.testTimeStamp);
         testLat = (TextView) findViewById(R.id.testLat);
         testLng = (TextView) findViewById(R.id.testLng);
+        testAddressString = (TextView) findViewById(R.id.testAddressString);
+        getInfo = (Button) findViewById(R.id.getinfo);
+
 
         LocationManager locationManager;
         String svcName = Context.LOCATION_SERVICE;
-        locationManager = (LocationManager)getSystemService(svcName);
+        locationManager = (LocationManager) getSystemService(svcName);
 
         Criteria criteria = new Criteria();
         criteria.setAccuracy(Criteria.ACCURACY_FINE);
@@ -148,8 +185,10 @@ public class MainActivity extends AppCompatActivity {
 
                     updateWithNewLocation(l);
 
+
                     locationManager.requestLocationUpdates(provider, 2000, 10,
                             locationListener);
+
                 }
             }
 
@@ -164,9 +203,18 @@ public class MainActivity extends AppCompatActivity {
                     locationListener);
         }
 
-        testTimeStamp.setText(getCurrentTimeStamp());
-        testLat.setText(String.valueOf(lat));
-        testLng.setText(String.valueOf(lng));
+        getInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                testTimeStamp.setText(getCurrentTimeStamp());
+                testLat.setText(String.valueOf(lat));
+                testLng.setText(String.valueOf(lng));
+                testAddressString.setText(addressString);
+
+            }
+        });
+
+
 
         nfcAdapter = NfcAdapter.getDefaultAdapter(this);
 
@@ -212,8 +260,32 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+/*
+    String timestamp = currentTimeStamp;
+    String latitude = lat.toString();
+    String longitude = lng.toString();
+    String address = addressString;
+    String NFCTag = "";
+
+    JSONObject jsonBody = new JSONObject();
+
+    try
+    {
+        jsonBody.put("timestamp", timestamp);
+        jsonBody.put("latitude", latitude);
+        jsonBody.put("longitude", longitude);
+        jsonBody.put("address", address);
+        jsonBody.put("NFCTag", "");
 
 
+}catch (JSONException e) {
+
+    } */
+
+// add the request object to the queue to be executed
+    //ApplicationController.getInstance().addToRequestQueue(req);
+
+/*
     public class PostJSONData extends AsyncTask<Void, Void, Boolean> {
 
         public PostJSONData() {}
@@ -241,7 +313,7 @@ public class MainActivity extends AppCompatActivity {
             }
             return false;
         }
-    }
+    } */
 
     @Override
     protected void onResume() {
@@ -272,22 +344,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+
     public void onNewIntent(Intent intent) {
 
         if (isToScan && intent.hasExtra(NfcAdapter.EXTRA_TAG)) {
             isToScan = false;
-            scanTag = (Button)findViewById(R.id.scanTag);
+            scanTag = (Button) findViewById(R.id.scanTag);
             scanTag.setText("Scan Tag");
             scanTag.setBackgroundColor(0xff888888);
 
             if (intent.getAction().equals(NfcAdapter.ACTION_TAG_DISCOVERED)) {
-                ((TextView)findViewById(R.id.testUID)).setText(
+                ((TextView) findViewById(R.id.testUID)).setText(
                         "UID = " +
                                 ByteArrayToHexString(intent.getByteArrayExtra(NfcAdapter.EXTRA_ID)));
             }
         }
     }
-
 
     private String ByteArrayToHexString(byte [] inarray) {
         int i, j, in;
