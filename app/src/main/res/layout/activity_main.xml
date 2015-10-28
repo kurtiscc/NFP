@@ -32,6 +32,12 @@
         android:layout_height="wrap_content"
         android:id="@+id/testAddressString"/>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get Info"
+            android:id="@+id/sendData"/>
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -49,6 +55,7 @@
             android:layout_gravity="center_vertical"
             android:enabled="true"
             android:background="#57e93a" />
+
 
     </LinearLayout>
 

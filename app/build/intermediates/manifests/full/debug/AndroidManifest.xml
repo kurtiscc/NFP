@@ -24,6 +24,7 @@
         android:required="true" />
 
     <application
+        android:name="it446.nfp.ApplicationController"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"

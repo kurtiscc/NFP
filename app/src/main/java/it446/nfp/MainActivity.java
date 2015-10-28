@@ -36,7 +36,9 @@ import android.nfc.tech.NfcB;
 import android.nfc.tech.NfcF;
 import android.nfc.tech.NfcV;
 import android.util.Log;
+import android.widget.Toast;
 
+import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
@@ -70,10 +72,12 @@ public class MainActivity extends AppCompatActivity {
     TextView testUID;
     Button getInfo;
     Button scanTag;
+    Button sendData;
     private boolean isToScan = false;
     PendingIntent pendingIntent;
     NfcAdapter nfcAdapter;
     IntentFilter[] intentFiltersArray;
+    Intent myIntent;
 
 
     TextView testAddressString;
@@ -160,6 +164,7 @@ public class MainActivity extends AppCompatActivity {
         testLng = (TextView) findViewById(R.id.testLng);
         testAddressString = (TextView) findViewById(R.id.testAddressString);
         getInfo = (Button) findViewById(R.id.getinfo);
+        sendData = (Button) findViewById(R.id.sendData);
 
 
         LocationManager locationManager;
@@ -214,6 +219,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        sendData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendData();
+            }
+        });
+
 
 
         nfcAdapter = NfcAdapter.getDefaultAdapter(this);
@@ -260,60 +272,53 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-/*
-    String timestamp = currentTimeStamp;
-    String latitude = lat.toString();
-    String longitude = lng.toString();
-    String address = addressString;
-    String NFCTag = "";
 
-    JSONObject jsonBody = new JSONObject();
+    public void sendData() {
 
-    try
-    {
-        jsonBody.put("timestamp", timestamp);
-        jsonBody.put("latitude", latitude);
-        jsonBody.put("longitude", longitude);
-        jsonBody.put("address", address);
-        jsonBody.put("NFCTag", "");
+        if(myIntent != null) {
+            String timestamp = currentTimeStamp;
+            String latitude = lat.toString();
+            String longitude = lng.toString();
+            String address = addressString;
+            String NFCTag = ByteArrayToHexString(myIntent.getByteArrayExtra(NfcAdapter.EXTRA_ID));
 
+            JSONObject jsonBody = new JSONObject();
 
-}catch (JSONException e) {
-
-    } */
-
-// add the request object to the queue to be executed
-    //ApplicationController.getInstance().addToRequestQueue(req);
-
-/*
-    public class PostJSONData extends AsyncTask<Void, Void, Boolean> {
-
-        public PostJSONData() {}
-        JSONObject jsonObject = null;
-
-        @Override
-        protected Boolean doInBackground(Void... params) {
-            String url = "http://url.com";
             try {
-
-                URL object = new URL(url);
-                HttpURLConnection con = (HttpURLConnection) object.openConnection();
-                con.setDoOutput(true);
-                con.setDoInput(true);
-                con.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
-                con.setRequestProperty("Accept", "application/json");
-                con.setRequestMethod("POST");
+                jsonBody.put("timestamp", timestamp);
+                jsonBody.put("latitude", latitude);
+                jsonBody.put("longitude", longitude);
+                jsonBody.put("address", address);
+                jsonBody.put("NFCTag",NFCTag);
 
 
-                OutputStream os = con.getOutputStream();
-                os.write(jsonObject.toString().getBytes("UTF-8"));
-                os.close();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
+            } catch (JSONException e) {
+
             }
-            return false;
+            String url = "http://requestb.in/whbnuuwh";
+
+            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
+                    url, jsonBody,
+                    new Response.Listener<JSONObject>() {
+
+                        @Override
+                        public void onResponse(JSONObject response) {
+                        }
+                    }, new Response.ErrorListener() {
+
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                }
+            });
+
+            if (ApplicationController.getInstance() == null) {
+                Log.d("TEST", "here");
+            }
+            else {
+                ApplicationController.getInstance().addToRequestQueue(jsonObjectRequest);
+            }
         }
-    } */
+    }
 
     @Override
     protected void onResume() {
@@ -346,7 +351,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
 
     public void onNewIntent(Intent intent) {
-
+            myIntent = intent;
         if (isToScan && intent.hasExtra(NfcAdapter.EXTRA_TAG)) {
             isToScan = false;
             scanTag = (Button) findViewById(R.id.scanTag);
