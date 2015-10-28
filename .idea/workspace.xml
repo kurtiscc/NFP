@@ -10,7 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc344d4d-4071-4d3e-ad6d-f224535a2b56" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/androidTest/java/it446/nfp/SourceCodeControl.java" afterPath="$PROJECT_DIR$/app/src/androidTest/java/it446/nfp/SourceCodeControl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="NFP.iws" />
@@ -2139,7 +2138,13 @@
       <option name="project" value="LOCAL" />
       <updated>1446042614474</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Source Code Control assignment">
+      <created>1446042694722</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1446042694723</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
