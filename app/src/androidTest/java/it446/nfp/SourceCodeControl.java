@@ -1,2 +1,0 @@
-import android.content.AbstractThreadedSyncAdapter;
-import android.widget.ActionMenuView;
