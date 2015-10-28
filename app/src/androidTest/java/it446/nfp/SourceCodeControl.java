@@ -1,1 +1,1 @@
-import android.content.ClipboardManager;
+import android.content.AbstractThreadedSyncAdapter;
