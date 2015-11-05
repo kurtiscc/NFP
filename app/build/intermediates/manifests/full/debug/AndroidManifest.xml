@@ -30,13 +30,14 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="it446.nfp.MainActivity"
+            android:name="it446.nfp.HomePage"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-
+            </intent-filter>
+            <intent-filter>
                 <action android:name="android.nfc.action.NDEF_DISCOVERED" />
 
                 <category android:name="android.intent.category.DEFAULT" />
@@ -47,6 +48,10 @@
 
                 <data android:mimeType="text/plain" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="it446.nfp.CreateNewSample"
+            android:label="@string/title_create_new_sample" >
         </activity>
     </application>
 

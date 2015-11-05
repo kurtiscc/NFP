@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/create_new_sample"
+        android:id="@+id/createNewSampleTV"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.05" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.05">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/patient_name"
+            android:id="@+id/patientNameTV"
+            android:layout_weight="0.01" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/patientNameTVPopulated"
+            android:layout_weight="0.04" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.05">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/DOB"
+            android:id="@+id/DOBTV"
+            android:layout_weight="0.02" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/DOBTVPopulated"
+            android:layout_weight="0.04" />
+    </LinearLayout>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/select_doctor"
+        android:layout_weight="0.05"
+        android:clickable="true"
+        android:hint="@string/select_doctor"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/select_nurse"
+        android:layout_weight="0.05"
+        android:hint="@string/select_nurse"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/select_destination"
+        android:layout_weight="0.05"
+        android:hint="@string/select_destination"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/proceed_to_tag_association"
+        android:id="@+id/proceed_to_tag_association"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.05"
+        android:clickable="true" />
+</LinearLayout>

@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="ChangeListManager">
-<<<<<<< Updated upstream
-    <list default="true" id="fc344d4d-4071-4d3e-ad6d-f224535a2b56" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Philip\StudioProjects\NFP\app\src\androidTest\java\it446\nfp\SourceCodeControl.java" afterPath="" />
-=======
-    <list default="true" id="61d2c74a-4323-4fa8-977c-c885954cbd5d" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\christensenkc\Documents\AndroidStudioProjects\NFP\.idea\encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\christensenkc\Documents\AndroidStudioProjects\NFP\.idea\libraries\appcompat_v7_23_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\christensenkc\Documents\AndroidStudioProjects\NFP\.idea\libraries\support_annotations_23_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\christensenkc\Documents\AndroidStudioProjects\NFP\.idea\libraries\support_v4_23_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\christensenkc\Documents\AndroidStudioProjects\NFP\.idea\runConfigurations.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\christensenkc\Documents\AndroidStudioProjects\NFP\NFP.iml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\christensenkc\Documents\AndroidStudioProjects\NFP\app\app.iml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\christensenkc\Documents\AndroidStudioProjects\NFP\app\build\intermediates\classes\debug\it446\nfp\MainActivity$PostJSONData.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it446/nfp/MainActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it446/nfp/MainActivity$1.class" />
+    <list default="true" id="6c6eb936-886d-4810-a512-2e767e56ad40" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/it446/nfp/CreateNewSample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/it446/nfp/HomePage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/it446/nfp/SearchBrowsePatient.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_create_new_sample.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home_page.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_search_browse_patient.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it446/nfp/MainActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it446/nfp/MainActivity$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it446/nfp/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it446/nfp/MainActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it446/nfp/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it446/nfp/R$id.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it446/nfp/R$integer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it446/nfp/R$integer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it446/nfp/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it446/nfp/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it446/nfp/R$menu.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it446/nfp/R$menu.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it446/nfp/R$mipmap.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it446/nfp/R$mipmap.class" />
@@ -36,20 +39,24 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/outputFileStates.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/it446/nfp/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/it446/nfp/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/it446/nfp/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/it446/nfp/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_0_1.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResourcesdebug/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResourcesdebug/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
->>>>>>> Stashed changes
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_23_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_23_0_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="NFP.iws" />
@@ -65,6 +72,7 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
@@ -75,14 +83,62 @@
   <component name="FavoritesManager">
     <favorites_list name="NFP" />
   </component>
-<<<<<<< Updated upstream
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/it446/nfp/MainActivity.java">
+      <file leaf-file-name="HomePage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/it446/nfp/HomePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.0094213">
-              <caret line="233" column="0" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="30" column="60" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="82" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#659#896#0" expanded="true" />
+                <element signature="e#895#896#0" expanded="true" />
+                <element signature="e#1035#1276#0" expanded="true" />
+                <element signature="e#1275#1276#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreateNewSample.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/it446/nfp/CreateNewSample.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="37" column="11" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_create_new_sample.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_create_new_sample.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.448276">
+              <caret line="82" column="51" selection-start-line="82" selection-start-column="51" selection-end-line="82" selection-end-column="51" />
+              <folding>
+                <element signature="e#443#470#0" expanded="true" />
+                <element signature="e#934#956#0" expanded="true" />
+                <element signature="e#1607#1620#0" expanded="true" />
+                <element signature="e#2160#2183#0" expanded="true" />
+                <element signature="e#2386#2408#0" expanded="true" />
+                <element signature="e#2617#2645#0" expanded="true" />
+                <element signature="e#2771#2807#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.074074">
+              <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -92,7 +148,60 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="80" selection-start-line="7" selection-start-column="80" selection-end-line="7" selection-end-column="80" />
+              <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+              <folding>
+                <element signature="e#1068#1086#0" expanded="true" />
+                <element signature="e#1210#1228#0" expanded="true" />
+                <element signature="e#1955#1988#0" expanded="true" />
+                <element signature="e#2103#2140#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_home_page.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home_page.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.862069">
+              <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchBrowsePatient.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/it446/nfp/SearchBrowsePatient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.45857418">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_search_browse_patient.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_search_browse_patient.xml">
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/it446/nfp/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="159" column="47" selection-start-line="156" selection-start-column="4" selection-end-line="159" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -100,8 +209,14 @@
       </file>
     </leaf>
   </component>
-=======
->>>>>>> Stashed changes
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="layoutResourceFile_vertical" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -1226,7 +1341,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="C:\Users\christensenkc\Documents\AndroidStudioProjects\NFP" value="4334560929524" />
+        <entry key="C:\Users\christensenkc\Documents\AndroidStudioProjects\NFP" value="4334609022477" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1543,33 +1658,37 @@
       <projects_view />
     </option>
   </component>
-<<<<<<< Updated upstream
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/it446/nfp/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/androidTest/java/it446/nfp/SourceCodeControl.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_create_new_sample.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/it446/nfp/CreateNewSample.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_search_browse_patient.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/it446/nfp/SearchBrowsePatient.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/it446/nfp/HomePage.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_home_page.xml" />
       </list>
     </option>
   </component>
-=======
->>>>>>> Stashed changes
   <component name="NamedScopeManager">
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-10" />
-    <option name="width" value="2047" />
-    <option name="height" value="1390" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="false" id="Update" />
+    <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -1585,6 +1704,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1593,7 +1714,6 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-<<<<<<< Updated upstream
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="NFP" />
@@ -1606,6 +1726,56 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NFP" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NFP" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NFP" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1636,386 +1806,25 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+              <option name="myItemId" value="manifests" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidManifestsGroupNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NFP" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-=======
->>>>>>> Stashed changes
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-<<<<<<< Updated upstream
-      <pane id="ProjectPane" />
-=======
-      <pane id="Scratches" />
->>>>>>> Stashed changes
       <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="recentsLimit" value="5" />
-<<<<<<< Updated upstream
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="ZX1G22DVN4" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="205827dd" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5_API_23_x86" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="FullScreen" value="false" />
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/2.4/taskArtifacts/outputFileStates.bin</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/generated/source/r/debug/it446/nfp/R.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/classes/debug/it446/nfp/MainActivity$1.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/classes/debug/it446/nfp/MainActivity$PostJSONData.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/classes/debug/it446/nfp/MainActivity.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/classes/debug/it446/nfp/R$id.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/classes/debug/it446/nfp/R$integer.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/classes/debug/it446/nfp/R$layout.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/classes/debug/it446/nfp/R$menu.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/classes/debug/it446/nfp/R$mipmap.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/classes/debug/it446/nfp/R$string.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/classes/debug/it446/nfp/R$style.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/classes/debug/it446/nfp/R$styleable.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/classes/debug/it446/nfp/R.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/incremental/mergeAssets/androidTest/debug/merger.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/incremental/mergeAssets/debug/merger.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/incremental/mergeResourcesandroidTest/debug/merger.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/incremental/mergeResourcesdebug/merger.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/color/abc_background_cache_hint_selector_material_dark.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/color/abc_background_cache_hint_selector_material_light.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/color/abc_search_url_text.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/color/switch_thumb_material_dark.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-v23/abc_control_background_material.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable/abc_btn_check_material.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_dark.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_light.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_full_material.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable/abc_text_cursor_material.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/abc_search_view.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/abc_select_dialog_material.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_login.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_main.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_sign_up.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/notification_media_action.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/notification_media_cancel_action.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/notification_template_big_media.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/notification_template_big_media_narrow.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/notification_template_lines.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/notification_template_media.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/menu/menu_main.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-af/values-af.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-am/values-am.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ar/values-ar.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-az-rAZ/values-az-rAZ.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-bg/values-bg.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-bn-rBD/values-bn-rBD.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ca/values-ca.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-cs/values-cs.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-da/values-da.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-de/values-de.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-el/values-el.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-en-rAU/values-en-rAU.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-en-rGB/values-en-rGB.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-en-rIN/values-en-rIN.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-es-rUS/values-es-rUS.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-es/values-es.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-et-rEE/values-et-rEE.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-eu-rES/values-eu-rES.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-fa/values-fa.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-fi/values-fi.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-fr-rCA/values-fr-rCA.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-fr/values-fr.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-gl-rES/values-gl-rES.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-gu-rIN/values-gu-rIN.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-h720dp/values-h720dp.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-hdpi/values-hdpi.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-hi/values-hi.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-hr/values-hr.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-hu/values-hu.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-hy-rAM/values-hy-rAM.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-in/values-in.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-is-rIS/values-is-rIS.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-it/values-it.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-iw/values-iw.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ja/values-ja.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ka-rGE/values-ka-rGE.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-kk-rKZ/values-kk-rKZ.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-km-rKH/values-km-rKH.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-kn-rIN/values-kn-rIN.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ko/values-ko.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ky-rKG/values-ky-rKG.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-land/values-land.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-large/values-large.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-lo-rLA/values-lo-rLA.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-lt/values-lt.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-lv/values-lv.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-mk-rMK/values-mk-rMK.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ml-rIN/values-ml-rIN.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-mn-rMN/values-mn-rMN.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-mr-rIN/values-mr-rIN.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ms-rMY/values-ms-rMY.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-my-rMM/values-my-rMM.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-nb/values-nb.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ne-rNP/values-ne-rNP.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-nl/values-nl.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-pa-rIN/values-pa-rIN.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-pl/values-pl.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-port/values-port.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-pt-rPT/values-pt-rPT.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-pt/values-pt.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ro/values-ro.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ru/values-ru.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-si-rLK/values-si-rLK.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-sk/values-sk.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-sl/values-sl.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-sq-rAL/values-sq-rAL.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-sr/values-sr.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-sv/values-sv.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-sw/values-sw.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-sw600dp/values-sw600dp.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ta-rIN/values-ta-rIN.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-te-rIN/values-te-rIN.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-th/values-th.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-tl/values-tl.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-tr/values-tr.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-uk/values-uk.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ur-rPK/values-ur-rPK.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-uz-rUZ/values-uz-rUZ.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-v11/values-v11.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-v12/values-v12.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-v14/values-v14.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-v17/values-v17.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-v18/values-v18.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-v21/values-v21.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-v22/values-v22.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-v23/values-v23.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-vi/values-vi.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-w360dp/values-w360dp.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-w480dp/values-w480dp.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-w500dp/values-w500dp.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-w600dp/values-w600dp.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-w720dp/values-w720dp.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-w820dp/values-w820dp.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-xlarge-land/values-xlarge-land.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-xlarge/values-xlarge.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-zh-rCN/values-zh-rCN.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-zh-rHK/values-zh-rHK.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-zh-rTW/values-zh-rTW.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-zu/values-zu.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/it446/nfp/MainActivity.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/build/intermediates/gradle_project_sync_data.bin</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/local.properties</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
-=======
->>>>>>> Stashed changes
   </component>
   <component name="RunManager" selected="Android Application.app">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
-      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
@@ -2030,8 +1839,7 @@
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="0" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
       <option name="SELECTED_CLOUD_DEVICE_CONFIGURATION_ID" value="0" />
@@ -2043,7 +1851,6 @@
       <option name="CLOUD_DEVICE_SERIAL_NUMBER" value="" />
       <method />
     </configuration>
-<<<<<<< Updated upstream
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
       <option name="TESTING_TYPE" value="0" />
@@ -2062,8 +1869,7 @@
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="0" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
       <option name="SELECTED_CLOUD_DEVICE_CONFIGURATION_ID" value="0" />
@@ -2075,8 +1881,6 @@
       <option name="CLOUD_DEVICE_SERIAL_NUMBER" value="" />
       <method />
     </configuration>
-=======
->>>>>>> Stashed changes
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -2111,6 +1915,11 @@
       </option>
       <envs />
       <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -2149,10 +1958,22 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="executeSpecs" factoryName="Gauge Execution">
+      <setting name="environment" value="" />
+      <setting name="specsToExecute" value="" />
+      <setting name="tags" value="" />
+      <setting name="parallelNodes" value="" />
+      <setting name="execInParallel" value="false" />
+      <setting name="programParameters" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="moduleName" value="" />
+      <envMap />
+      <setting name="rowsRange" value="" />
+      <method />
+    </configuration>
     <configuration default="false" name="app" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="app" />
       <option name="ACTIVITY_CLASS" value="" />
-      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
@@ -2167,8 +1988,7 @@
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="0" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
       <option name="SELECTED_CLOUD_DEVICE_CONFIGURATION_ID" value="0" />
@@ -2197,137 +2017,101 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="61d2c74a-4323-4fa8-977c-c885954cbd5d" name="Default" comment="" />
-      <created>1446044440424</created>
+      <changelist id="6c6eb936-886d-4810-a512-2e767e56ad40" name="Default" comment="" />
+      <created>1446763063496</created>
       <option name="number" value="Default" />
-      <updated>1446044440424</updated>
+      <updated>1446763063496</updated>
     </task>
-<<<<<<< Updated upstream
-    <task id="LOCAL-00001" summary="Added NFC read functionality">
-      <created>1445477191335</created>
-      <option name="number" value="00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1445477191335</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Source Code Control assignment">
-      <created>1446042531088</created>
-      <option name="number" value="00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1446042531088</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Source Code Control assignment">
-      <created>1446042614474</created>
-      <option name="number" value="00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1446042614474</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Source Code Control assignment">
-      <created>1446042694722</created>
-      <option name="number" value="00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1446042694723</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Source Code Control assignment">
-      <created>1446042850517</created>
-      <option name="number" value="00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1446042850517</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-10" y="0" width="2047" height="1390" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
-    <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3298969" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17355794" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32993197" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.035714287" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-=======
-    <servers />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.06972789" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32980332" sideWeight="0.5" order="-1" side_tool="false" content_ui="combo" />
->>>>>>> Stashed changes
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32980332" sideWeight="0.5" order="-1" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32993197" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
     </layout>
-  </component>
-  <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USER_GROUPS">
-      <collection />
-    </option>
-    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-      <collection />
-    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-<<<<<<< Updated upstream
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added NFC read functionality" />
-    <MESSAGE value="Source Code Control assignment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Source Code Control assignment" />
-  </component>
-=======
->>>>>>> Stashed changes
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
-<<<<<<< Updated upstream
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/src/main/java/it446/nfp/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="181" column="18" selection-start-line="181" selection-start-column="18" selection-end-line="181" selection-end-column="18" />
+          <caret line="159" column="47" selection-start-line="156" selection-start-column="4" selection-end-line="159" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it446/nfp/CreateNewSample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="11" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_create_new_sample.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.448276">
+          <caret line="82" column="51" selection-start-line="82" selection-start-column="51" selection-end-line="82" selection-end-column="51" />
+          <folding>
+            <element signature="e#443#470#0" expanded="true" />
+            <element signature="e#934#956#0" expanded="true" />
+            <element signature="e#1607#1620#0" expanded="true" />
+            <element signature="e#2160#2183#0" expanded="true" />
+            <element signature="e#2386#2408#0" expanded="true" />
+            <element signature="e#2617#2645#0" expanded="true" />
+            <element signature="e#2771#2807#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_search_browse_patient.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.074074">
+          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -2335,36 +2119,50 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+          <folding>
+            <element signature="e#1068#1086#0" expanded="true" />
+            <element signature="e#1210#1228#0" expanded="true" />
+            <element signature="e#1955#1988#0" expanded="true" />
+            <element signature="e#2103#2140#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it446/nfp/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it446/nfp/HomePage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="30" column="60" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="82" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#659#896#0" expanded="true" />
+            <element signature="e#895#896#0" expanded="true" />
+            <element signature="e#1035#1276#0" expanded="true" />
+            <element signature="e#1275#1276#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home_page.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="80" selection-start-line="7" selection-start-column="80" selection-end-line="7" selection-end-column="80" />
+        <state vertical-scroll-proportion="-5.862069">
+          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it446/nfp/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it446/nfp/SearchBrowsePatient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.0094213">
-          <caret line="233" column="0" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.45857418">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
   </component>
-=======
->>>>>>> Stashed changes
 </project>

@@ -295,7 +295,7 @@ public class MainActivity extends AppCompatActivity {
             } catch (JSONException e) {
 
             }
-            String url = "http://requestb.in/whbnuuwh";
+            String url = "http://52.10.212.104:8000/addtag";
 
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
                     url, jsonBody,
