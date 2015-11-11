@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Browse/Search Patient"
-        android:id="@+id/button2"
+        android:id="@+id/searchBrowsePatientBtn"
         android:layout_gravity="center_horizontal" />
 
     <Button
@@ -23,4 +23,11 @@
         android:text="Create New Sample"
         android:id="@+id/createNewSampleBtn"
         android:layout_gravity="center_horizontal" />
-</LinearLayout><!-- From: file:/C:/Users/christensenkc/Documents/AndroidStudioProjects/NFP/app/src/main/res/layout/activity_home_page.xml -->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Read Existing Tag"
+        android:id="@+id/readExistingTagBtn"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout><!-- From: file:/C:/Users/Philip/StudioProjects/NPFre11-9/NFP/app/src/main/res/layout/activity_home_page.xml -->

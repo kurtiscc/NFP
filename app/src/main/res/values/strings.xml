@@ -10,11 +10,12 @@
     <string name="select_nurse">Select Nurse</string>
     <string name="select_destination">Select Destination</string>
     <string name="proceed_to_tag_association">Proceed to Tag Association</string>
-
+    <string name="read_tag_info">Read Tag Info</string>
     <!-- TITLES -->
 
     <string name="title_create_new_sample">Create New Sample</string>
     <string name="title_search_browse_patient">Browse/Search Patients</string>
+    <string name="title_read_existing_tag">Read Existing Tag</string>
 
 
 </resources>

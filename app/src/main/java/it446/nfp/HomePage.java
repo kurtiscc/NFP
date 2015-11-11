@@ -13,6 +13,7 @@ public class HomePage extends AppCompatActivity {
 
     private Button createNewSampleBtn;
     private Button searchBrowsePatientBtn;
+    private Button readExistingTagBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,15 @@ public class HomePage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomePage.this, SearchBrowsePatient.class);
+                startActivity(intent);
+            }
+        });
+
+        readExistingTagBtn = (Button) findViewById(R.id.readExistingTagBtn);
+        readExistingTagBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomePage.this, ReadExistingTag.class);
                 startActivity(intent);
             }
         });

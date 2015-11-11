@@ -53,6 +53,14 @@
             android:name="it446.nfp.CreateNewSample"
             android:label="@string/title_create_new_sample" >
         </activity>
+        <activity
+            android:name="it446.nfp.SearchBrowsePatient"
+            android:label="@string/title_search_browse_patient" >
+        </activity>
+        <activity
+            android:name="it446.nfp.ReadExistingTag"
+            android:label="@string/title_read_existing_tag" >
+        </activity>
     </application>
 
 </manifest>
