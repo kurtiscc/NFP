@@ -11,11 +11,21 @@
     <string name="select_destination">Select Destination</string>
     <string name="proceed_to_tag_association">Proceed to Tag Association</string>
     <string name="read_tag_info">Read Tag Info</string>
+
+    <string name="scan_purpose">Pick a scan purpose</string>
+    <string-array name="scan_purpose_array">
+        <item>Create</item>
+        <item>Pick Up/Receive</item>
+        <item>Drop Off</item>
+    </string-array>
+
     <!-- TITLES -->
 
     <string name="title_create_new_sample">Create New Sample</string>
     <string name="title_search_browse_patient">Browse/Search Patients</string>
     <string name="title_read_existing_tag">Read Existing Tag</string>
     <string name="title_tag_association">Tag Association</string>
+
+
 
 </resources>
