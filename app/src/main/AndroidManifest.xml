@@ -46,6 +46,10 @@
         <activity
             android:name=".ReadExistingTag"
             android:label="@string/title_read_existing_tag"></activity>
+
+        <activity
+            android:name=".TagAssociation"
+            android:label="@string/title_read_existing_tag"></activity>
     </application>
 
 </manifest>

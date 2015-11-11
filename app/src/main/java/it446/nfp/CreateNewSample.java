@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.content.Intent;
 
 /**
  * Created by ChristensenKC on 11/5/2015.
@@ -33,7 +34,8 @@ public class CreateNewSample extends AppCompatActivity{
         proceedToTagAssociation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(CreateNewSample.this, TagAssociation.class);
+                startActivity(intent);
             }
         });
 

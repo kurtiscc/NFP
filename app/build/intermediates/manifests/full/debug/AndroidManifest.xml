@@ -59,8 +59,7 @@
         </activity>
         <activity
             android:name="it446.nfp.ReadExistingTag"
-            android:label="@string/title_read_existing_tag" >
-        </activity>
+            android:label="@string/title_read_existing_tag" />
     </application>
 
 </manifest>

@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Philip\StudioProjects\NPFre11-9\NFP\app\src\main\AndroidManifest.xml:2:1-52:12
+ADDED from C:\Users\Philip\StudioProjects\NPFre11-9\NFP\app\src\main\AndroidManifest.xml:2:1-51:12
 	package
 		ADDED from C:\Users\Philip\StudioProjects\NPFre11-9\NFP\app\src\main\AndroidManifest.xml:3:5-24
 		INJECTED from C:\Users\Philip\StudioProjects\NPFre11-9\NFP\app\src\main\AndroidManifest.xml
@@ -66,7 +66,7 @@ ADDED from C:\Users\Philip\StudioProjects\NPFre11-9\NFP\app\src\main\AndroidMani
 	android:required
 		ADDED from C:\Users\Philip\StudioProjects\NPFre11-9\NFP\app\src\main\AndroidManifest.xml:16:9-32
 application
-ADDED from C:\Users\Philip\StudioProjects\NPFre11-9\NFP\app\src\main\AndroidManifest.xml:17:5-50:19
+ADDED from C:\Users\Philip\StudioProjects\NPFre11-9\NFP\app\src\main\AndroidManifest.xml:17:5-49:19
 MERGED from [com.android.support:appcompat-v7:23.0.1] C:\Users\Philip\StudioProjects\NPFre11-9\NFP\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.0.1] C:\Users\Philip\StudioProjects\NPFre11-9\NFP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:22:5-20
 MERGED from [com.mcxiaoke.volley:library-aar:1.0.0] C:\Users\Philip\StudioProjects\NPFre11-9\NFP\app\build\intermediates\exploded-aar\com.mcxiaoke.volley\library-aar\1.0.0\AndroidManifest.xml:5:5-19
@@ -127,7 +127,7 @@ ADDED from C:\Users\Philip\StudioProjects\NPFre11-9\NFP\app\src\main\AndroidMani
 	android:name
 		ADDED from C:\Users\Philip\StudioProjects\NPFre11-9\NFP\app\src\main\AndroidManifest.xml:43:13-48
 activity#it446.nfp.ReadExistingTag
-ADDED from C:\Users\Philip\StudioProjects\NPFre11-9\NFP\app\src\main\AndroidManifest.xml:46:9-49:20
+ADDED from C:\Users\Philip\StudioProjects\NPFre11-9\NFP\app\src\main\AndroidManifest.xml:46:9-48:72
 	android:label
 		ADDED from C:\Users\Philip\StudioProjects\NPFre11-9\NFP\app\src\main\AndroidManifest.xml:48:13-60
 	android:name
