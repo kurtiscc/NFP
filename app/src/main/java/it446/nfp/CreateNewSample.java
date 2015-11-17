@@ -3,6 +3,7 @@ package it446.nfp;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -20,6 +21,8 @@ public class CreateNewSample extends AppCompatActivity{
     protected Spinner selectNurse;
     protected Spinner selectDestination;
     protected Button proceedToTagAssociation;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +42,21 @@ public class CreateNewSample extends AppCompatActivity{
             }
         });
 
+        selectDoctor = (Spinner) findViewById(R.id.select_doctor);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.doctor_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        selectDoctor.setAdapter(adapter);
+
+        selectNurse = (Spinner) findViewById(R.id.select_nurse);
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.nurse_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        selectNurse.setAdapter(adapter2);
+
+
+        selectDestination = (Spinner) findViewById(R.id.select_destination);
+        ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(this, R.array.destination_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        selectDestination.setAdapter(adapter3);
     }
 
 

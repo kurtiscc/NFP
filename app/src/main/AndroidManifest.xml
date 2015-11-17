@@ -40,7 +40,7 @@
             android:label="@string/title_create_new_sample" >
         </activity>
         <activity
-            android:name=".SearchBrowsePatient"
+            android:name=".SearchBrowse"
             android:label="@string/title_search_browse_patient" >
         </activity>
         <activity

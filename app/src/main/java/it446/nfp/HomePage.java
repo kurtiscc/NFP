@@ -33,7 +33,7 @@ public class HomePage extends AppCompatActivity {
         searchBrowsePatientBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomePage.this, SearchBrowsePatient.class);
+                Intent intent = new Intent(HomePage.this, SearchBrowse.class);
                 startActivity(intent);
             }
         });
