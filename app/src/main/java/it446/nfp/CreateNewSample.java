@@ -38,6 +38,9 @@ public class CreateNewSample extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(CreateNewSample.this, TagAssociation.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("patientName", patientNameTVPopulated.getText().toString());
+                bundle.putString("patientDOB", DOBTVPopulated.getText().toString());
                 startActivity(intent);
             }
         });
@@ -57,6 +60,21 @@ public class CreateNewSample extends AppCompatActivity{
         ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(this, R.array.destination_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         selectDestination.setAdapter(adapter3);
+
+        proceedToTagAssociation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CreateNewSample.this, TagAssociation.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("patientName", patientNameTVPopulated.getText().toString());
+                bundle.putString("patientDOB", DOBTVPopulated.getText().toString());
+                bundle.putString("doctor", selectDoctor.getSelectedItem().toString());
+                bundle.putString("nurse", selectNurse.getSelectedItem().toString());
+                bundle.putString("destination", selectDestination.getSelectedItem().toString());
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
     }
 
 

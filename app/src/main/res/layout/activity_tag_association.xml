@@ -29,6 +29,13 @@
                 android:text="Patient Name: "
                 android:id="@+id/labelName"
                 android:layout_margin="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="[ ]"
+                android:id="@+id/valueName" />
         </TableRow>
 
         <TableRow
@@ -43,6 +50,13 @@
                 android:text="Time: "
                 android:id="@+id/labelTime"
                 android:layout_margin="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="[ ]"
+                android:id="@+id/valueTime" />
         </TableRow>
 
         <TableRow
@@ -57,6 +71,13 @@
                 android:text="Latitude: "
                 android:id="@+id/labelLatitude"
                 android:layout_margin="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="[ ]"
+                android:id="@+id/valueLatitude" />
         </TableRow>
 
         <TableRow
@@ -71,6 +92,13 @@
                 android:text="Longitude: "
                 android:id="@+id/labelLongitude"
                 android:layout_margin="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="[ ]"
+                android:id="@+id/valueLongitude" />
         </TableRow>
 
         <TableRow
@@ -108,6 +136,7 @@
                 android:text="Start scanning"
                 android:id="@+id/scanTag"
                 android:layout_margin="5dp" />
+
         </TableRow>
 
         <TableRow
@@ -122,6 +151,13 @@
                 android:text="Tag UID: "
                 android:id="@+id/labelUID"
                 android:layout_margin="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="[ ]"
+                android:id="@+id/valueUID" />
         </TableRow>
 
         <TableRow
