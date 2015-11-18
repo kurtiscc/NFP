@@ -62,7 +62,7 @@
             android:label="@string/title_read_existing_tag" />
         <activity
             android:name="it446.nfp.TagAssociation"
-            android:label="@string/title_read_existing_tag" />
+            android:label="@string/title_tag_association" />
     </application>
 
 </manifest>

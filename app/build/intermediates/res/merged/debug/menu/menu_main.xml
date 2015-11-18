@@ -4,4 +4,4 @@
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" app:showAsAction="never" />
 </menu>
-<!-- From: file:/C:/Users/Philip.Jones/Documents/AndroidStudioProjects/NFPResync11-17/NFP/app/src/main/res/menu/menu_main.xml -->
+<!-- From: file:/C:/Users/Philip/StudioProjects/NFPresync(11-18)/NFP/app/src/main/res/menu/menu_main.xml -->
