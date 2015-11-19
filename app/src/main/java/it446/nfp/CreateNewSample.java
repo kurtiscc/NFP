@@ -70,7 +70,7 @@ public class CreateNewSample extends AppCompatActivity{
                 bundle.putString("patientDOB", DOBTVPopulated.getText().toString());
                 bundle.putString("doctor", selectDoctor.getSelectedItem().toString());
                 bundle.putString("nurse", selectNurse.getSelectedItem().toString());
-                bundle.putString("destination", selectDestination.getSelectedItem().toString());
+                bundle.putString("clinic", selectDestination.getSelectedItem().toString());
                 intent.putExtras(bundle);
                 startActivity(intent);
             }

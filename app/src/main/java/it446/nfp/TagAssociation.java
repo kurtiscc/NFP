@@ -60,9 +60,10 @@ public class TagAssociation extends AppCompatActivity {
 
     private String doctor;
     private String nurse;
-    public String destination;
+    public String clinic;
     protected String name;
     private String DOB;
+    private String tagUID;
 
     private static String addressString = "No address found";
     private static String currentTimeStamp;
@@ -162,7 +163,7 @@ public class TagAssociation extends AppCompatActivity {
         DOB = newSampleBundle.getString("patientDOB");
         doctor = newSampleBundle.getString("doctor");
         nurse = newSampleBundle.getString("nurse");
-        destination = newSampleBundle.getString("destination");
+        clinic = newSampleBundle.getString("clinic");
         valueName = (TextView) findViewById(R.id.valueName);
         valueName.setText(name);
 
@@ -241,7 +242,12 @@ public class TagAssociation extends AppCompatActivity {
         valueLongitude.setText(String.valueOf(lng));
        // valueAddress.setText(addressString);
 
-
+        submitTag.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendData();
+            }
+        });
 
 
 
@@ -254,22 +260,26 @@ public class TagAssociation extends AppCompatActivity {
             String latitude = lat.toString();
             String longitude = lng.toString();
             String address = addressString;
-            String NFCTag = MainActivity.ByteArrayToHexString(myIntent.getByteArrayExtra(NfcAdapter.EXTRA_ID));
+           //tring NFCTag = MainActivity.ByteArrayToHexString(myIntent.getByteArrayExtra(NfcAdapter.EXTRA_ID));
 
             JSONObject jsonBody = new JSONObject();
 
             try {
+                jsonBody.put ("patientID", name);
                 jsonBody.put("timestamp", timestamp);
-                jsonBody.put("latitude", latitude);
-                jsonBody.put("longitude", longitude);
-                jsonBody.put("address", address);
-                jsonBody.put("NFCTag",NFCTag);
+                jsonBody.put("lat", latitude);
+                jsonBody.put("lon", longitude);
+                jsonBody.put("addr", address);
+                jsonBody.put("tagUID",tagUID);
+                jsonBody.put("doc",doctor);
+                jsonBody.put("user", nurse);
+                jsonBody.put("clinic", clinic);
 
 
             } catch (JSONException e) {
 
             }
-            String url = "http://52.10.212.104:8000/addtag";
+            String url = "http://nfp.capstone.it.et.byu.edu/addtag";
 
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
                     url, jsonBody,
@@ -346,7 +356,8 @@ public class TagAssociation extends AppCompatActivity {
             scanTag.setBackgroundColor(0xff888888);
 
             if (intent.getAction().equals(NfcAdapter.ACTION_TAG_DISCOVERED)) {
-                valueUID.setText("" + MainActivity.ByteArrayToHexString(intent.getByteArrayExtra(NfcAdapter.EXTRA_ID)));
+                tagUID = MainActivity.ByteArrayToHexString(intent.getByteArrayExtra(NfcAdapter.EXTRA_ID));
+                valueUID.setText(tagUID);
 
 
 
