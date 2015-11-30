@@ -280,7 +280,7 @@ public class MainActivity extends AppCompatActivity {
             } catch (JSONException e) {
 
             }
-            String url = "http://52.10.212.104:8000/addtag";
+            String url = "http://nfp.capstone.it.et.byu.edu/addtag";
 
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
                     url, jsonBody,

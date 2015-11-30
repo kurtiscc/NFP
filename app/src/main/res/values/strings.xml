@@ -48,9 +48,13 @@
     <!-- TITLES -->
 
     <string name="title_create_new_sample">Create New Sample</string>
-    <string name="title_search_browse_patient">Browse/Search Patients</string>
+    <string name="title_search_browse_patient">Browse/Search</string>
     <string name="title_read_existing_tag">Read Existing Tag</string>
     <string name="title_tag_association">Tag Association</string>
+    <string name="title_view_doctor">View Doctors</string>
+    <string name="title_view_patient">View Patients</string>
+    <string name="title_view_tag">View Tags</string>
+    <string name="title_patient_profile">Patient Profile</string>
 
 
 

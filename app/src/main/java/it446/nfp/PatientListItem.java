@@ -6,12 +6,14 @@ package it446.nfp;
 public class PatientListItem {
     private int mIconId;
     private String mUserName;
+    private String mSSN;
     private String mDOB;
 
     public PatientListItem() {
         mIconId = -1;
         mUserName = "";
         mDOB = "";
+        mSSN = "";
     }
 
     public int getmIconId() {
@@ -36,6 +38,14 @@ public class PatientListItem {
 
     public void setmDOB(String mDOB) {
         this.mDOB = mDOB;
+    }
+
+    public String getmSSN() {
+        return mSSN;
+    }
+
+    public void setmSSN(String mSSN) {
+        this.mSSN = mSSN;
     }
 
 

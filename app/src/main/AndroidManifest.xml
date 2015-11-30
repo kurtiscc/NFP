@@ -37,19 +37,37 @@
         </activity>
         <activity
             android:name=".CreateNewSample"
-            android:label="@string/title_create_new_sample" >
+            android:label="@string/title_create_new_sample"
+            android:parentActivityName=".PatientProfileActivity">
         </activity>
         <activity
             android:name=".SearchBrowse"
-            android:label="@string/title_search_browse_patient" >
-        </activity>
+            android:windowSoftInputMode="stateHidden"
+            android:label="@string/title_search_browse_patient"
+            android:parentActivityName=".HomePage"/>
         <activity
             android:name=".ReadExistingTag"
-            android:label="@string/title_read_existing_tag"></activity>
-
+            android:label="@string/title_read_existing_tag"
+            android:parentActivityName=".HomePage"/>
         <activity
             android:name=".TagAssociation"
-            android:label="@string/title_tag_association"></activity>
+            android:label="@string/title_tag_association"/>
+        <activity
+            android:name=".ViewDoctorActivity"
+            android:label="@string/title_view_doctor"
+            android:parentActivityName=".SearchBrowse"/>
+        <activity
+            android:name=".ViewPatientActivity"
+            android:label="@string/title_view_patient"
+            android:parentActivityName=".ViewDoctorActivity"/>
+        <activity
+            android:name=".ViewTagActivity"
+            android:label="@string/title_view_tag"
+            android:parentActivityName=".PatientProfileActivity"/>
+        <activity
+            android:name=".PatientProfileActivity"
+            android:label="@string/title_patient_profile"
+            android:parentActivityName=".ViewPatientActivity"/>
     </application>
 
 </manifest>

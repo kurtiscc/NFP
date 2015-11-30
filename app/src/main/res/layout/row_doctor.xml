@@ -14,7 +14,6 @@
         android:src="@mipmap/ic_user"
         android:layout_centerVertical="true"/>
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,7 +31,25 @@
             android:layout_height="wrap_content"
             android:id="@+id/doctor_name"/>
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4">
 
+
+            <TextView
+                android:text="Clinic A"
+                android:textColor="@color/secondary_text"
+                android:textSize="15sp"
+                android:id="@+id/doctor_clinic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"/>
+
+
+        </LinearLayout>
 
 
     </LinearLayout>

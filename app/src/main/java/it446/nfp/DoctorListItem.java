@@ -6,10 +6,12 @@ package it446.nfp;
 public class DoctorListItem {
     private int mIconId;
     private String mDoctorName;
+    private String mDoctorClinic;
 
     public DoctorListItem() {
         mIconId = -1;
         mDoctorName = "";
+        mDoctorClinic = "";
     }
 
     public int getmIconId() {
@@ -28,5 +30,11 @@ public class DoctorListItem {
         this.mDoctorName = mDoctorName;
     }
 
+    public String getmDoctorClinic() {
+        return mDoctorClinic;
+    }
 
+    public void setmDoctorClinic(String mDoctorClinic) {
+        this.mDoctorClinic = mDoctorClinic;
+    }
 }

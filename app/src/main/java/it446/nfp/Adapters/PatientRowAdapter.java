@@ -41,6 +41,7 @@ public class PatientRowAdapter extends ArrayAdapter<PatientListItem> {
             holder = new PatientRowHolder();
             holder.patientNameTV = (TextView) row.findViewById(R.id.patient_name);
             holder.patientDOBTV = (TextView) row.findViewById(R.id.patient_dob);
+            holder.patientSSNTV = (TextView) row.findViewById(R.id.patient_ssn);
             holder.patientThumbnail = (ImageView) row.findViewById(R.id.patient_thumbnail);
 
             row.setTag(holder);
@@ -52,13 +53,14 @@ public class PatientRowAdapter extends ArrayAdapter<PatientListItem> {
         final PatientListItem currentItem = mPatientList.get(position);
 
         holder.patientNameTV.setText(currentItem.getmUserName());
+        holder.patientSSNTV.setText(currentItem.getmSSN());
         holder.patientDOBTV.setText(currentItem.getmDOB());
 
         return row;
     }
 
     static class PatientRowHolder {
-        TextView patientNameTV, patientDOBTV;
+        TextView patientNameTV, patientSSNTV, patientDOBTV;
         ImageView patientThumbnail;
     }
 }

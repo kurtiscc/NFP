@@ -37,7 +37,7 @@ public class ClinicRowAdapter extends ArrayAdapter<ClinicListItem> {
 
             holder = new ClinicRowHolder();
             holder.clinicNameTV = (TextView) row.findViewById(R.id.clinic_name);
-            holder.clinicAddressTV = (TextView) row.findViewById(R.id.clinic_address);
+            holder.clinicAddressTV = (TextView) row.findViewById(R.id.clinic_address2);
             holder.clinicThumbnail = (ImageView) row.findViewById(R.id.clinic_thumbnail);
 
             row.setTag(holder);
