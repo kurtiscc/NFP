@@ -26,12 +26,12 @@
             android:id="@+id/patientNameTV"
             android:layout_weight="0.01" />
 
-        <TextView
+        <AutoCompleteTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/patientNameTVPopulated"
             android:layout_weight="0.04"
-            android:text="[test name]" />
+            android:text="" />
 
     </LinearLayout>
 
