@@ -132,7 +132,7 @@ public class CreateNewSample extends AppCompatActivity{
         });
 
         selectDoctor = (Spinner) findViewById(R.id.select_doctor);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.doctor_array, android.R.layout.simple_spinner_item);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item, doctorNameList);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         selectDoctor.setAdapter(adapter);
 
@@ -186,8 +186,9 @@ public class CreateNewSample extends AppCompatActivity{
                                     JSONObject patient = (JSONObject) response
                                             .get(i);
                                     jsonResponsePatientName = patient.getString("Name");
-//                                    jsonResponsePatientDOB = patient.getString("DOB");
-                                    patientNameList.add(jsonResponsePatientName);
+                                    jsonResponsePatientDOB = patient.getString("DoB");
+                                    String autoCompItem = jsonResponsePatientName + ", " + jsonResponsePatientDOB;
+                                    patientNameList.add(autoCompItem);
 
 
 
