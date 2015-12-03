@@ -42,6 +42,9 @@ public class CreateNewSample extends AppCompatActivity{
     private List<PatientListItem> mSearchPatientList = new ArrayList<PatientListItem>();
     private List<String> doctorNameList = new ArrayList<String>();
     private List<String> patientNameList = new ArrayList<String>();
+    private List<String> patientNameOnlyList = new ArrayList<String>();
+    private List<String> patientDOBOnlyList = new ArrayList<String>();
+
     private List<String> nurseNameList = new ArrayList<String>();
  //   private TextView patientNameTV;
     private TextView DOBTV;
@@ -69,6 +72,11 @@ public class CreateNewSample extends AppCompatActivity{
     private ProgressDialog pDialog;
     private String jsonResponsePatientName, jsonResponsePatientDOB, jsonResponseDoctorName, jsonResponseNurseName;
 
+    private String intentName;
+    private String intentDOB;
+    private String name;
+    private String DOB;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,7 +88,25 @@ public class CreateNewSample extends AppCompatActivity{
         //android.support.v7.widget.SearchView searchView = (android.support.v7.widget.SearchView) findViewById(R.id.search_friends);
         //searchResultListView = (ListView) findViewById(R.id.search_results_list_view);
 
+        Intent newSampleIntent = getIntent();
 
+        Bundle newSampleBundle = newSampleIntent.getExtras();
+
+
+        /*When creating a sample from the Patient profile page */
+        if (newSampleBundle != null){
+            //String test = newSampleBundle.getString("patientName");
+            intentName = newSampleBundle.getString("patientName");
+            intentDOB = newSampleBundle.getString("patientDOB");
+            //SSN = newSampleBundle.getString("SSN");
+            TextView nameTVPop = (TextView) findViewById(R.id.patientNameTVPopulated);
+            TextView DOBTVPop = (TextView) findViewById(R.id.DOBTVPopulated);
+            nameTVPop.setText(intentName);
+            DOBTVPop.setText(intentDOB);
+            name = intentName;
+            DOB = intentDOB;
+
+        }
 
         pDialog = new ProgressDialog(this);
         pDialog.setMessage("Please wait...");
@@ -101,11 +127,20 @@ public class CreateNewSample extends AppCompatActivity{
 //        patientNameTV.setOnItemSelectedListener();
 //        patientNameTV.setOnItemClickListener(this);
 
-        ArrayAdapter<String> adapterName = new ArrayAdapter<String>(this,
+        final ArrayAdapter<String> adapterName = new ArrayAdapter<String>(this,
                 android.R.layout.simple_dropdown_item_1line, patientNameList);
         AutoCompleteTextView textView = (AutoCompleteTextView)
                 findViewById(R.id.patientNameTVPopulated);
         textView.setAdapter(adapterName);
+        textView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                name = patientNameOnlyList.get(position);
+                DOB = patientDOBOnlyList.get(position);
+                patientNameTVPopulated.setText(name);
+                DOBTVPopulated.setText(DOB);
+            }
+        });
 
 
 
@@ -125,9 +160,11 @@ public class CreateNewSample extends AppCompatActivity{
             public void onClick(View v) {
                 Intent intent = new Intent(CreateNewSample.this, TagAssociation.class);
                 Bundle bundle = new Bundle();
-                bundle.putString("patientName", patientNameTVPopulated.getText().toString());
+                //bundle.putString("patientName", patientNameTVPopulated.getText().toString());
+                bundle.putString("patientName", name);
                 bundle.putString("patientDOB", DOBTVPopulated.getText().toString());
                 startActivity(intent);
+
             }
         });
 
@@ -153,8 +190,10 @@ public class CreateNewSample extends AppCompatActivity{
             public void onClick(View v) {
                 Intent intent = new Intent(CreateNewSample.this, TagAssociation.class);
                 Bundle bundle = new Bundle();
-                bundle.putString("patientName", patientNameTVPopulated.getText().toString());
-                bundle.putString("patientDOB", DOBTVPopulated.getText().toString());
+                //bundle.putString("patientName", patientNameTVPopulated.getText().toString());
+                //bundle.putString("patientDOB", DOBTVPopulated.getText().toString());
+                bundle.putString("patientName", name);
+                bundle.putString("patientDOB", DOB);
                 bundle.putString("doctor", selectDoctor.getSelectedItem().toString());
                 bundle.putString("nurse", selectNurse.getSelectedItem().toString());
                 bundle.putString("clinic", selectDestination.getSelectedItem().toString());
@@ -189,6 +228,8 @@ public class CreateNewSample extends AppCompatActivity{
                                     jsonResponsePatientDOB = patient.getString("DoB");
                                     String autoCompItem = jsonResponsePatientName + ", " + jsonResponsePatientDOB;
                                     patientNameList.add(autoCompItem);
+                                    patientNameOnlyList.add(jsonResponsePatientName);
+                                    patientDOBOnlyList.add(jsonResponsePatientDOB);
 
 
 

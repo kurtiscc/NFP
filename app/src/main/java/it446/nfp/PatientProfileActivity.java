@@ -14,11 +14,32 @@ import android.widget.TextView;
  */
 public class PatientProfileActivity extends AppCompatActivity {
     private Button createNewSampleBtn;
+    private TextView patientName;
+    private TextView patientDOB;
+    private TextView patientSSN;
+    private String name;
+    private String DOB;
+    private String SSN;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_profile);
+
+        patientName = (TextView) findViewById(R.id.patient_name);
+        patientDOB = (TextView) findViewById(R.id.patient_dob);
+        patientSSN = (TextView) findViewById(R.id.patient_ssn);
+
+
+        Intent newSampleIntent = getIntent();
+        Bundle newSampleBundle = newSampleIntent.getExtras();
+        name = newSampleBundle.getString("patientName");
+        DOB = newSampleBundle.getString("patientDOB");
+        SSN = newSampleBundle.getString("SSN");
+
+        patientName.setText(name);
+        patientDOB.setText(DOB);
+        patientSSN.setText(SSN);
 
         createNewSampleBtn = (Button) findViewById(R.id.create_new_sample_btn);
 
@@ -26,6 +47,13 @@ public class PatientProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(PatientProfileActivity.this, CreateNewSample.class);
+
+                Bundle bundle = new Bundle();
+                bundle.putString("patientName",name);
+                bundle.putString("patientDOB", DOB);
+                bundle.putString("SSN", SSN);
+                intent.putExtras(bundle);
+
                 startActivity(intent);
             }
         });

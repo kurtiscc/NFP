@@ -41,7 +41,7 @@ public class ViewPatientActivity extends AppCompatActivity {
     private String jsonResponse;
     // Progress dialog
     private ProgressDialog pDialog;
-    private String jsonResponePatientName, jsonResponsePatientSSN, jsonResponsePatientDOB;
+    private String jsonResponsePatientName, jsonResponsePatientSSN, jsonResponsePatientDOB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,13 +91,13 @@ public class ViewPatientActivity extends AppCompatActivity {
 
                                     JSONObject patient = (JSONObject) response
                                             .get(i);
-                                    jsonResponePatientName = patient.getString("Name");
+                                    jsonResponsePatientName = patient.getString("Name");
                                     jsonResponsePatientSSN = patient.getString("ssn");
                                     jsonResponsePatientDOB = patient.getString("DoB");
 
                                     PatientListItem patientListItem = new PatientListItem();
                                     patientListItem.setmIconId(R.mipmap.ic_accept_circle);
-                                    patientListItem.setmUserName(jsonResponePatientName);
+                                    patientListItem.setmUserName(jsonResponsePatientName);
                                     patientListItem.setmDOB(jsonResponsePatientDOB);
                                     patientListItem.setmSSN(jsonResponsePatientSSN);
                                     mSearchPatientList.add(patientListItem);
@@ -148,6 +148,11 @@ public class ViewPatientActivity extends AppCompatActivity {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     Intent intent = new Intent(ViewPatientActivity.this, PatientProfileActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("patientName",mSearchPatientList.get(position).getmUserName());
+                    bundle.putString("patientDOB", mSearchPatientList.get(position).getmDOB());
+                    bundle.putString("SSN", mSearchPatientList.get(position).getmSSN());
+                    intent.putExtras(bundle);
                     startActivity(intent);
                 }
             });

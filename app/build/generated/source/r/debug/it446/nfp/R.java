@@ -1599,7 +1599,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0d003b;
         public static final int action_mode_bar_stub=0x7f0d003a;
         public static final int action_mode_close_button=0x7f0d0023;
-        public static final int action_settings=0x7f0d00a4;
+        public static final int action_settings=0x7f0d00a1;
         public static final int activity_chooser_view_content=0x7f0d0024;
         public static final int alertTitle=0x7f0d002e;
         public static final int always=0x7f0d001b;
@@ -1621,7 +1621,7 @@ containing a value of this type.
         public static final int decor_content_parent=0x7f0d003c;
         public static final int default_activity_button=0x7f0d0027;
         public static final int disableHome=0x7f0d000c;
-        public static final int dob=0x7f0d009e;
+        public static final int dob=0x7f0d009d;
         public static final int doctor_clinic=0x7f0d009b;
         public static final int doctor_name=0x7f0d009a;
         public static final int doctor_thumbnail=0x7f0d0099;
@@ -1661,9 +1661,9 @@ containing a value of this type.
         public static final int parentPanel=0x7f0d002b;
         public static final int patientNameTV=0x7f0d004e;
         public static final int patientNameTVPopulated=0x7f0d004f;
-        public static final int patient_dob=0x7f0d009f;
-        public static final int patient_name=0x7f0d009d;
-        public static final int patient_ssn=0x7f0d00a1;
+        public static final int patient_dob=0x7f0d0064;
+        public static final int patient_name=0x7f0d0063;
+        public static final int patient_ssn=0x7f0d0065;
         public static final int patient_thumbnail=0x7f0d009c;
         public static final int placeholder_profile_image=0x7f0d0062;
         public static final int proceed_to_tag_association=0x7f0d0055;
@@ -1707,13 +1707,13 @@ containing a value of this type.
         public static final int src_atop=0x7f0d0015;
         public static final int src_in=0x7f0d0016;
         public static final int src_over=0x7f0d0017;
-        public static final int ssn=0x7f0d00a0;
+        public static final int ssn=0x7f0d009e;
         public static final int status_bar_latest_event_content=0x7f0d008b;
         public static final int submitTag=0x7f0d0088;
         public static final int submit_area=0x7f0d0049;
         public static final int tabMode=0x7f0d000b;
-        public static final int tag_id=0x7f0d00a3;
-        public static final int tag_thumbnail=0x7f0d00a2;
+        public static final int tag_id=0x7f0d00a0;
+        public static final int tag_thumbnail=0x7f0d009f;
         public static final int testAddressString=0x7f0d005e;
         public static final int testLat=0x7f0d005c;
         public static final int testLng=0x7f0d005d;
@@ -1731,9 +1731,6 @@ containing a value of this type.
         public static final int topPanel=0x7f0d002c;
         public static final int up=0x7f0d0008;
         public static final int useLogo=0x7f0d0012;
-        public static final int user_email=0x7f0d0065;
-        public static final int user_name=0x7f0d0063;
-        public static final int user_steps=0x7f0d0064;
         public static final int valueClinic=0x7f0d0074;
         public static final int valueDOB=0x7f0d0071;
         public static final int valueDoctor=0x7f0d0077;

@@ -33,15 +33,15 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/user_name"
+                android:id="@+id/patient_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="UserName"
+                android:text="PatientName"
                 android:textColor="@color/white"
                 android:textSize="28sp"/>
 
             <TextView
-                android:id="@+id/user_steps"
+                android:id="@+id/patient_dob"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Date of Birth"
@@ -49,7 +49,7 @@
                 android:textSize="20sp"/>
 
             <TextView
-                android:id="@+id/user_email"
+                android:id="@+id/patient_ssn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="SSN"
@@ -85,4 +85,4 @@
     </LinearLayout>
 
 
-</LinearLayout><!-- From: file:/C:/Users/Philip/StudioProjects/NFPresync12-2/NFP/app/src/main/res/layout/activity_patient_profile.xml -->
+</LinearLayout><!-- From: file:/C:/Users/Philip.Jones/Documents/AndroidStudioProjects/NFPResync11-30/NFP/app/src/main/res/layout/activity_patient_profile.xml -->
