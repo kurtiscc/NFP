@@ -34,7 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="[no tag scanned]"
+                android:text="[no sample scanned]"
                 android:id="@+id/valueUID"
                 android:layout_margin="5dp" />
         </TableRow>
@@ -176,8 +176,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Read Tag"
+        android:text="Read Sample"
         android:id="@+id/scanTag"
         android:layout_margin="10dp" />
 
-</LinearLayout><!-- From: file:/C:/Users/Philip.Jones/Documents/AndroidStudioProjects/NFPResync11-30/NFP/app/src/main/res/layout/activity_read_existing_tag.xml -->
+</LinearLayout><!-- From: file:/C:/Users/Philip/StudioProjects/NFPresync12-2/NFP/app/src/main/res/layout/activity_read_existing_tag.xml -->

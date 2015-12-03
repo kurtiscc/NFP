@@ -10,8 +10,8 @@
     <string name="select_doctor">Select Doctor</string>
     <string name="select_nurse">Select Nurse</string>
     <string name="select_destination">Select Destination</string>
-    <string name="proceed_to_tag_association">Proceed to Tag Association</string>
-    <string name="read_tag_info">Read Tag Info</string>
+    <string name="proceed_to_tag_association">Proceed to Sample Association</string>
+    <string name="read_tag_info">Read Sample Info</string>
     <string name="search">Search</string>
     <string name="no_results">No results have been found for this search.</string>
 
@@ -49,11 +49,11 @@
 
     <string name="title_create_new_sample">Create New Sample</string>
     <string name="title_search_browse_patient">Browse/Search</string>
-    <string name="title_read_existing_tag">Read Existing Tag</string>
-    <string name="title_tag_association">Tag Association</string>
+    <string name="title_read_existing_tag">Read Existing Sample</string>
+    <string name="title_tag_association">Sample Association</string>
     <string name="title_view_doctor">View Doctors</string>
     <string name="title_view_patient">View Patients</string>
-    <string name="title_view_tag">View Tags</string>
+    <string name="title_view_tag">View Samples</string>
     <string name="title_patient_profile">Patient Profile</string>
 
 
