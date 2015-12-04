@@ -18,7 +18,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.ScrollView;
+import android.widget.ImageView;
 
 /**
  * Created by Philip on 11/9/2015.
@@ -31,6 +34,9 @@ public class ReadExistingTag extends AppCompatActivity {
     private TextView valueDoctor;
     private TextView valueLastScanned;
     private TextView valueLastLocation;
+    //private ScrollView scrollViewHistory;
+    //private ImageView imageViewMap;
+    private LinearLayout trackingHistory;
 
 
     Button scanTag;
@@ -59,7 +65,9 @@ public class ReadExistingTag extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_read_existing_tag);
-
+        //imageViewMap = (ImageView) findViewById(R.id.imageView);
+        trackingHistory = (LinearLayout) findViewById(R.id.trackingHistoryLL);
+        trackingHistory.setVisibility(View.INVISIBLE);
         nfcAdapter = NfcAdapter.getDefaultAdapter(this);
 
         final Button scanTagButton = (Button) findViewById(R.id.scanTag);
@@ -133,6 +141,7 @@ public class ReadExistingTag extends AppCompatActivity {
         valueLastScanned = (TextView) findViewById(R.id.valueLastScanned);
         valueLastLocation = (TextView) findViewById(R.id.valueLastLocation);
 
+
         if (isToScan && intent.hasExtra(NfcAdapter.EXTRA_TAG)) {
             isToScan = false;
             scanTag = (Button) findViewById(R.id.scanTag);
@@ -143,10 +152,11 @@ public class ReadExistingTag extends AppCompatActivity {
                 valueUID.setText("" + MainActivity.ByteArrayToHexString(intent.getByteArrayExtra(NfcAdapter.EXTRA_ID)));
                 valueName.setText("John Doe");
                 valueDOB.setText("1/1/1976");
-                valueClinic.setText("Mayo");
+                valueClinic.setText("Family Medical");
                 valueDoctor.setText("Dr. Doctor");
-                valueLastScanned.setText("10/31/2015 11:11am");
-                valueLastLocation.setText("Mayo Clinic");
+                valueLastScanned.setText("12/4/2015 11:50am");
+                valueLastLocation.setText("Pathology Lab");
+                trackingHistory.setVisibility(View.VISIBLE);
             }
         }
     }

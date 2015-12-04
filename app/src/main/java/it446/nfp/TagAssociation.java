@@ -23,11 +23,14 @@ import android.nfc.tech.NfcF;
 import android.nfc.tech.NfcV;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -67,6 +70,7 @@ public class TagAssociation extends AppCompatActivity {
 
     private static String addressString = "No address found";
     private static String currentTimeStamp;
+    private static String curTimeDisplay;
     public static Double lat;
     public static Double lng;
     TextView valueTime;
@@ -81,6 +85,8 @@ public class TagAssociation extends AppCompatActivity {
     NfcAdapter nfcAdapter;
     IntentFilter[] intentFiltersArray;
     Intent myIntent;
+
+ //   final private int REQUEST_CODE_ASK_PERMISSIONS = 123;
 
     private MainActivity mainActFunction;
 
@@ -108,8 +114,7 @@ public class TagAssociation extends AppCompatActivity {
         public void onProviderEnabled(String provider) {
         }
 
-        public void onStatusChanged(String provider, int status,
-                                    Bundle extras) {
+        public void onStatusChanged(String provider, int status, Bundle extras) {
         }
     };
     private void updateWithNewLocation(Location location) {
@@ -141,8 +146,9 @@ public class TagAssociation extends AppCompatActivity {
         try {
 
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSZ");
+            SimpleDateFormat dateFormatDisp = new SimpleDateFormat("HH:mm:ss   dd-MM-yyyy");
             currentTimeStamp = dateFormat.format(new Date()); // Find todays date
-
+            curTimeDisplay = dateFormatDisp.format(new Date());
             return currentTimeStamp;
         } catch (Exception e) {
             e.printStackTrace();
@@ -174,6 +180,10 @@ public class TagAssociation extends AppCompatActivity {
 
         nfcAdapter = NfcAdapter.getDefaultAdapter(this);
 
+        valueTime = (TextView) findViewById(R.id.valueTime);
+        valueLatitude = (TextView) findViewById(R.id.valueLatitude);
+        valueLongitude = (TextView) findViewById(R.id.valueLongitude);
+
         final Button scanTagButton = (Button) findViewById(R.id.scanTag);
         scanTagButton.setBackgroundColor(0xff888888);
         scanTagButton.setOnClickListener(new View.OnClickListener() {
@@ -183,14 +193,16 @@ public class TagAssociation extends AppCompatActivity {
                 scanTag = (Button) findViewById(R.id.scanTag);
                 scanTag.setText("Scanning");
                 scanTag.setBackgroundColor(0xff00ff00);
+                getCurrentTimeStamp();
+                valueTime.setText(curTimeDisplay);
+                valueLatitude.setText(String.valueOf(lat));
+                valueLongitude.setText(String.valueOf(lng));
 
             }
         });
 
 
-        valueTime = (TextView) findViewById(R.id.valueTime);
-        valueLatitude = (TextView) findViewById(R.id.valueLatitude);
-        valueLongitude = (TextView) findViewById(R.id.valueLongitude);
+
         //valueAddress = (TextView) findViewById(R.id.valueAddress);
         submitTag = (Button) findViewById(R.id.submitTag);
 
@@ -207,7 +219,17 @@ public class TagAssociation extends AppCompatActivity {
         criteria.setSpeedRequired(false);
         criteria.setCostAllowed(true);
 
-        if (Build.VERSION.SDK_INT == 23) {
+
+
+
+
+        if (Build.VERSION.SDK_INT >= 23) {
+
+//            int hasAccessFineLocationPermission = checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION);
+//            if (hasAccessFineLocationPermission != PackageManager.PERMISSION_GRANTED) {
+//                requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+//                        REQUEST_CODE_ASK_PERMISSIONS);
+//            }
 
             if (locationManager != null) {
                 if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
@@ -237,9 +259,7 @@ public class TagAssociation extends AppCompatActivity {
         }
 
 
-        valueTime.setText(getCurrentTimeStamp());
-        valueLatitude.setText(String.valueOf(lat));
-        valueLongitude.setText(String.valueOf(lng));
+
        // valueAddress.setText(addressString);
 
         submitTag.setOnClickListener(new View.OnClickListener() {
@@ -302,6 +322,8 @@ public class TagAssociation extends AppCompatActivity {
                 ApplicationController.getInstance().addToRequestQueue(jsonObjectRequest);
             }
         }
+        Toast.makeText(TagAssociation.this, "Sample Submitted", Toast.LENGTH_SHORT)
+                .show();
     }
 
 
@@ -370,5 +392,14 @@ public class TagAssociation extends AppCompatActivity {
             }
         }
     }
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 }
