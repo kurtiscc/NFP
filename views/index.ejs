@@ -5,11 +5,61 @@
 		<link rel='stylesheet' href='/stylesheets/style.css' />
 	</head>
 	<body ng-app="pathology" ng-controller="MainCtrl">
-		<h1><%= title %></h1>
+<!-- 		<h1><%= title %></h1>
 		<p>Welcome to <%= title %></p>
 
-		<p>{{test}}</p>
-		
+		<p>{{test}}</p> -->
+
+		<div id="search">
+			<h2>Search</h2>
+			<!-- Search  
+				- dropdown of locations/clinics
+				- dropdown of doctors
+				- dropdown of patients
+				- input of all three
+				- get back a list and display it, then browse like normal
+			-->		
+			<label for="searchLocation">Choose Location:</label>
+			<select name="searchLocation" id="searchLocation" ng-options="option.Name for option in searchdata.cliniclist track by option._id" ng-model="searchdata.selectedlocation"></select>
+
+			<label for="searchDoctor">Choose Doctor:</label>
+			<select name="searchDoctor" id="searchDoctor" ng-options="option.Name for option in searchdata.doctorlist track by option._id" ng-model="searchdata.selecteddoctor"></select>
+
+			<label for="searchPatient">Choose Patient:</label>
+			<select name="searchPatient" id="searchPatient" ng-options="option.Name for option in searchdata.patientlist track by option._id" ng-model="searchdata.selectedpatient"></select>
+		</div>
+<!-- 		<p>{{searchdata.selectedlocation}}</p>
+		<p>{{searchdata.selecteddoctor}}</p>
+		<p>{{searchdata.selectedpatient}}</p> -->
+
+		<hr>
+		<h2>Browse</h2>
+		<!-- Browse	 
+			- list all clinics
+			- list all doctors and patients of a selected clinic
+			- list all patients of a selected doctor
+			- list all tags of a selected patient
+			- list all logs of a seleted tag
+		-->		
+
+		<div id="browse">
+			<span ng-repeat="clinic in searchdata.cliniclist" ng-click="setClinic(clinic);"></span>
+			<span ng-repeat="doctor in searchdata.doctorlist | filter:browseclinic" ng-click="setDoctor(doctor);"></span>
+			<span ng-repeat="patient in searchdata.patientlist | filter:browsedoctor "></span><!-- filter browseclinic-->
+			<span ng-repeat="tag in searchdata.taglist | "></span><!-- all tags by clinic, all tags by doctor, all tags for patient -->
+			<span ng-repeat="loca in tagdata | filter:browsetag"></span><!-- all location elements for a specific tag -->
+			
+
+		</div>
+		<hr>
+		<!-- List -->		
+
+		<hr>
+		<!-- -->		
+
+		<!-- -->		
+
+
 	</body>
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
 	<script type="text/javascript" src="/javascripts/pathology.js"></script>
