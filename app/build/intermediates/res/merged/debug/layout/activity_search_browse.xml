@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="it446.nfp.SearchBrowse"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <android.support.v7.widget.SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        app:iconifiedByDefault="false"
+        app:queryHint="@string/search"
+        android:id="@+id/search_friends"/>
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ListView
+        android:id="@+id/search_results_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/secondary_text"
+        android:dividerHeight="1px">
+    </ListView>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+<!-- From: file:/C:/Users/Philip.Jones/Documents/AndroidStudioProjects/NFPResync11-30/NFP/app/src/main/res/layout/activity_search_browse.xml -->

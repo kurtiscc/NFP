@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="it446.nfp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.NFC" />
+
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name="it446.nfp.ApplicationController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="it446.nfp.HomePage"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.nfc.action.TAG_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="it446.nfp.CreateNewSample"
+            android:label="@string/title_create_new_sample"
+            android:parentActivityName="it446.nfp.PatientProfileActivity" >
+        </activity>
+        <activity
+            android:name="it446.nfp.SearchBrowse"
+            android:label="@string/title_search_browse_patient"
+            android:parentActivityName="it446.nfp.HomePage"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="it446.nfp.ReadExistingTag"
+            android:label="@string/title_read_existing_tag"
+            android:parentActivityName="it446.nfp.HomePage" />
+        <activity
+            android:name="it446.nfp.TagAssociation"
+            android:label="@string/title_tag_association" />
+        <activity
+            android:name="it446.nfp.ViewDoctorActivity"
+            android:label="@string/title_view_doctor"
+            android:parentActivityName="it446.nfp.SearchBrowse" />
+        <activity
+            android:name="it446.nfp.ViewPatientActivity"
+            android:label="@string/title_view_patient"
+            android:parentActivityName="it446.nfp.ViewDoctorActivity" />
+        <activity
+            android:name="it446.nfp.ViewTagActivity"
+            android:label="@string/title_view_tag"
+            android:parentActivityName="it446.nfp.PatientProfileActivity" />
+        <activity
+            android:name="it446.nfp.PatientProfileActivity"
+            android:label="@string/title_patient_profile"
+            android:parentActivityName="it446.nfp.ViewPatientActivity" />
+    </application>
+
+</manifest>

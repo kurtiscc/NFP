@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Philip\StudioProjects\NFPresync12-2\NFP\app\build\intermediates\exploded-aar\com.mcxiaoke.volley\library-aar\1.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e40b9a81989bd4a846018551c280f8c4d837bf2e">
+        <dex dex="C:\Users\Philip\StudioProjects\NFPresync12-2\NFP\app\build\intermediates\pre-dexed\debug\classes-f2b9d7b26cb58213c6a0c781a24a429ba69c55ea.jar" />
+    </item>
+    <item
+        jar="C:\Users\Philip\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="C:\Users\Philip\StudioProjects\NFPresync12-2\NFP\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-b463ab5a72574b5ff13a1c532cf042386b5dea75.jar" />
+    </item>
+    <item
+        jar="C:\Users\Philip\StudioProjects\NFPresync12-2\NFP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="C:\Users\Philip\StudioProjects\NFPresync12-2\NFP\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-50513b9747ad1a7edca2204b571b6d58072dc859.jar" />
+    </item>
+    <item
+        jar="C:\Users\Philip\StudioProjects\NFPresync12-2\NFP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="C:\Users\Philip\StudioProjects\NFPresync12-2\NFP\app\build\intermediates\pre-dexed\debug\classes-2f526d20650745aba95056b3165c8032d0700f3b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Philip\StudioProjects\NFPresync12-2\NFP\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="C:\Users\Philip\StudioProjects\NFPresync12-2\NFP\app\build\intermediates\pre-dexed\debug\classes-315575bf517ebe633d1e71fc16e6dfaf13d04bda.jar" />
+    </item>
+
+</items>
