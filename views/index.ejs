@@ -27,6 +27,8 @@
 
 			<label for="searchPatient">Choose Patient:</label>
 			<select name="searchPatient" id="searchPatient" ng-options="option.Name for option in searchdata.patientlist track by option._id" ng-model="searchdata.selectedpatient"></select>
+
+			<label>Keyword</label><input type="text" ng-model="searchdata.textinput">
 		</div>
 <!-- 		<p>{{searchdata.selectedlocation}}</p>
 		<p>{{searchdata.selecteddoctor}}</p>
@@ -43,11 +45,26 @@
 		-->		
 
 		<div id="browse">
-			<span ng-repeat="clinic in searchdata.cliniclist" ng-click="setClinic(clinic);"></span>
+			<div ng-repeat="clinic in searchdata.cliniclist">
+				<p ng-click="getClinicChildren(clinic);clinic.showchildren = !clinic.showchildren;">{{clinic.Name}}</p>
+				<div ng-show="clinic.showchildren">
+					<div style="margin-left: 15px" ng-repeat="doctor in clinic.doctors" >
+						<p ng-click="getDoctorChildren(doctor); doctor.showchildren=!doctor.showchildren">{{doctor.Name}}</p>
+						<div ng-show="doctor.showchildren">
+							<div style="margin-left:30px" ng-repeat="patient in doctor.patients">{{patient.Name}}
+							<!-- start here place for the tags-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 			<span ng-repeat="doctor in searchdata.doctorlist | filter:browseclinic" ng-click="setDoctor(doctor);"></span>
-			<span ng-repeat="patient in searchdata.patientlist | filter:browsedoctor "></span><!-- filter browseclinic-->
-			<span ng-repeat="tag in searchdata.taglist | "></span><!-- all tags by clinic, all tags by doctor, all tags for patient -->
-			<span ng-repeat="loca in tagdata | filter:browsetag"></span><!-- all location elements for a specific tag -->
+			<!-- <span ng-repeat="patient in searchdata.patientlist | filter:browsedoctor "></span> -->
+			<!-- filter browseclinic-->
+			<!-- <span ng-repeat="tag in searchdata.taglist | "></span> -->
+			<!-- all tags by clinic, all tags by doctor, all tags for patient -->
+			<!-- <span ng-repeat="loca in tagdata | filter:browsetag"></span> -->
+			<!-- all location elements for a specific tag -->
 			
 
 		</div>

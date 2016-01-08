@@ -70,6 +70,30 @@ router.get('/getlist/:coll', function(req, res, next){
 	});
 });
 
+router.get('/getdoctors/:clinicname', function(req, res, next){
+	MC.connect('mongodb://localhost/NFP', function(err, db){
+		if(err) throw err;
+		var coll = db.collection('doctor');
+		coll.find({Clinic:req.params.clinicname}, function(err, list){
+			list.toArray(function(err, listArr){
+				res.end(""+JSON.stringify(listArr));
+			})
+		});
+	});
+});
+
+router.get('/getpatients/:doctorname', function(req,res, next){
+	MC.connect('mongodb://localhost/NFP', function(err, db){
+		if(err) throw err;
+		var coll = db.collection('patient');
+		coll.find({Doctor:req.params.doctorname}, function(err, list){
+			list.toArray(function(err, listArr){
+				res.end(""+JSON.stringify(listArr));
+			})
+		});
+	});
+});
+
 
 
 
