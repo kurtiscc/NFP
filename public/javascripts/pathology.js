@@ -24,8 +24,14 @@ app.controller('MainCtrl', ['$scope', 'urls', function($scope, urls){
 	}
 
 	$scope.getDoctorChildren = function(doctor){
-		urls.getpatients(doctor.Name).then(function(data){
+		urls.getpatients(doctor._id).then(function(data){
 			doctor.patients = data;
+		});
+	}
+
+	$scope.getPatientSamples = function(patient){
+		urls.getPatientSamples(patient._id).then(function(data){
+			patient.samples = data;
 		});
 	}
 	
@@ -48,9 +54,17 @@ app.factory('urls', ['$http', '$q', function($http, $q){
 		return prom.promise;
 	}
 
-	function getpatients(doctorname){
+	function getpatients(doctorid){
 		var prom = $q.defer();
-		$http.get("/getpatients/"+doctorname)
+		$http.get("/getpatients/"+doctorid)
+		.success(function(data){prom.resolve(data);})
+		.error(function(e){prom.resolve(e);})
+		return prom.promise;
+	}
+
+	function getPatientSamples(patientid){
+		var prom = $q.defer();
+		$http.get("/getsamples/"+patientid)
 		.success(function(data){prom.resolve(data);})
 		.error(function(e){prom.resolve(e);})
 		return prom.promise;
@@ -59,7 +73,8 @@ app.factory('urls', ['$http', '$q', function($http, $q){
 	return{
 		getList:getList,
 		getdoctors:getdoctors,
-		getpatients:getpatients
+		getpatients:getpatients,
+		getPatientSamples,getPatientSamples
 	}
 }]);
 

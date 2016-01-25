@@ -51,8 +51,11 @@
 					<div style="margin-left: 15px" ng-repeat="doctor in clinic.doctors" >
 						<p ng-click="getDoctorChildren(doctor); doctor.showchildren=!doctor.showchildren">{{doctor.Name}}</p>
 						<div ng-show="doctor.showchildren">
-							<div style="margin-left:30px" ng-repeat="patient in doctor.patients">{{patient.Name}}
-							<!-- start here place for the tags-->
+							<div style="margin-left:30px" ng-repeat="patient in doctor.patients">
+								<p ng-click="getPatientSamples(patient); patient.showsamples = !patient.showsamples;">{{patient.Name}}</p>
+								<div ng-show="patient.showsamples">
+									<div style="margin-left:45px;" ng-repeat="sample in patient.samples">PUT SAMPLE INFO HERE</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -65,11 +68,9 @@
 			<!-- all tags by clinic, all tags by doctor, all tags for patient -->
 			<!-- <span ng-repeat="loca in tagdata | filter:browsetag"></span> -->
 			<!-- all location elements for a specific tag -->
-			
-
 		</div>
 		<hr>
-		<!-- List -->		
+		<div >Here is the full sample info : Click to view location information</div>
 
 		<hr>
 		<!-- -->		
