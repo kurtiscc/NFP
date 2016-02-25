@@ -2,10 +2,15 @@ var express = require('express');
 var router = express.Router();
 var MC = require('mongodb').MongoClient;
 var ObjectID = require('mongodb').ObjectID;
+var async = require('async');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
+});
+
+router.get('/map', function(req, res, next){
+	res.render('map', {title:'Map'});
 });
 
 
@@ -20,11 +25,11 @@ router.get('/', function(req, res, next) {
 // });
 
 
-// router.post('/postjson', function(req, res, next){
-// 	console.log(req.body);
-// 	res.write("" + {'received': 'true'});
-// 	res.end();
-// });
+router.post('/postjson', function(req, res, next){
+	console.log(req.body);
+	res.write("" + JSON.stringify({'received': 'true'}));
+	res.end();
+});
 
 /*---------------------------------------------
 					GET
@@ -206,6 +211,7 @@ router.post('/addsample', function(req, res, next){
 });
 
 router.post('/addtrackingstep/:tagUID', function(req, res, next){
+	console.log(JSON.stringify(req.body));
 	var localtracking = {
 		lat:null,
 		lon:null,
@@ -229,6 +235,122 @@ router.post('/addtrackingstep/:tagUID', function(req, res, next){
 			if(err) throw err;
 			res.sendStatus(200);
 		});
+	});
+});
+
+router.post('/signup', function(req, res, next){
+	console.log(req.body);
+	console.log(JSON.stringify(req.body));
+	MC.connect('mongodb://localhost/NFP', function(err, db){
+		if(err) throw err;
+		var coll = db.collection('users');
+		coll.insert({email:req.body.email, password:req.body.password, loggedon: true}, function(err, inserted){
+			if (err) throw err;
+			var local = {"userid":inserted[0]._id};
+			console.log(local);
+			res.send(local);
+		});
+	});
+});
+
+router.post('/logon', function(req,res, next){
+	MC.connect('mongodb://localhost/NFP', function(err, db){
+		if(err) throw err;
+		var coll = db.collection('users');
+		coll.find({email:req.body.email}, function(err, list){
+			if(list.length == 0){
+				res.sendStatus(404);
+			}else{
+				for(var i = 0; i < list.length; i++){
+					if(list[i].password == req.body.password){
+						coll.update({_id:list[i]._id}, {$push:{loggedon: true}}, function(err, list){
+							if(err) throw err;
+							res.end(""+list[i]._id);
+						});
+						break;
+					}
+				}
+			}
+		});
+	});
+});
+
+router.post('/logoff', function(req, res, next){
+	MC.connect('mongodb://localhost/NFP', function(err, db){
+		if(err) throw err;
+		var newId = ObjectID(req.params.userid);
+		var coll = db.collection('users');
+		coll.update({_id:newId}, {$push:{loggedon:false}}, function(err, list){
+			if(err) throw err;
+			res.end("" + newId);
+		});
+	});
+});
+
+router.post("/search", function(req, res, next){
+	//http://www.kdelemme.com/2014/07/28/read-multiple-collections-mongodb-avoid-callback-hell/
+	//https://github.com/caolan/async
+	// console.log(req.body);
+	MC.connect('mongodb://localhost/NFP', function(err, db){
+		async.parallel([
+			function(callback){
+				if(req.body.clinic){
+					var coll = db.collection('clinic');
+					var regex = new RegExp(".*" + req.body.text + ".*", 'i');
+					var query = {"Name": regex};
+					coll.find(query, function(err, list){
+						list.toArray(function(err, listArr){
+							// console.log('listarr', listArr);
+							// console.log(JSON.stringify(listArr));
+							callback(null, listArr);
+						});
+					});
+				}else{
+					callback(null,null);
+				}
+			},
+			function(callback){
+				if(req.body.doctor){
+					var coll = db.collection('doctor');
+					var regex = new RegExp(".*" + req.body.text + ".*", 'i');
+					var query = {"Name": regex};
+					coll.find(query, function(err, list){
+						list.toArray(function(err, listArr){
+							// console.log('listarr', listArr);
+							// console.log(JSON.stringify(listArr));
+							callback(null, listArr);
+						});
+					});
+				}else{
+					callback(null,null);
+				}
+			},
+			function(callback){
+				if(req.body.patient){
+					var coll = db.collection('patient');
+					var regex = new RegExp(".*" + req.body.text + ".*", 'i');
+					var query = {"Name": regex};
+					coll.find(query, function(err, list){
+						list.toArray(function(err, listArr){
+							// console.log('listarr', listArr);
+							// console.log(JSON.stringify(listArr));
+							callback(null, listArr);
+						});
+					});
+				}else{
+					callback(null,null);
+				}
+			}
+		],
+			function(err, results){
+				if(err) throw err;
+				var sendResults = {};
+				sendResults.clinics = results[0] || [];
+				sendResults.doctors = results[1] || [];
+				sendResults.patients = results[2] || [];
+				return res.send(JSON.stringify(sendResults));
+			}
+		);
 	});
 });
 

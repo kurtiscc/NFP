@@ -2,83 +2,187 @@
 <html>
 	<head>
 		<title><%= title %></title>
+		<link rel="stylesheet" href='/stylesheets/css/bootstrap.css' />
 		<link rel='stylesheet' href='/stylesheets/style.css' />
+		<script src="http://maps.googleapis.com/maps/api/js" async defer></script>	
 	</head>
 	<body ng-app="pathology" ng-controller="MainCtrl">
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+				<div class='navbar-header'>
+					<a class="navbar-brand">Nearfield Pathology</a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li ng-class="{active:'search' == page.curPage}"><a ng-click="page.setPage('search')">Search</a></li>
+						<li ng-class="{active:'browse' == page.curPage}"><a ng-click="page.setPage('browse')">Browse</a></li>
+						<li ng-class="{active:'map' == page.curPage}"><a ng-click="page.setPage('map'); startMap();">Map</a></li>
+						<li ng-class="{active:'about' == page.curPage}"><a ng-click="page.setPage('about')">About</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 <!-- 		<h1><%= title %></h1>
 		<p>Welcome to <%= title %></p>
 
 		<p>{{test}}</p> -->
 
-		<div id="search">
-			<h2>Search</h2>
-			<!-- Search  
-				- dropdown of locations/clinics
-				- dropdown of doctors
-				- dropdown of patients
-				- input of all three
-				- get back a list and display it, then browse like normal
-			-->		
-			<label for="searchLocation">Choose Location:</label>
-			<select name="searchLocation" id="searchLocation" ng-options="option.Name for option in searchdata.cliniclist track by option._id" ng-model="searchdata.selectedlocation"></select>
+		<div class="container">
+			<div id="search" ng-show="'search' == page.curPage">
+				<h2>Search</h2>
+				<!-- Search  
+					- dropdown of locations/clinics
+					- dropdown of doctors
+					- dropdown of patients
+					- input of all three
+					- get back a list and display it, then browse like normal
+				-->		
+				<!-- <label for="searchLocation">Choose Location:</label>
+				<select name="searchLocation" id="searchLocation" ng-options="option.Name for option in searchdata.cliniclist track by option._id" ng-model="searchdata.selectedlocation"></select>
 
-			<label for="searchDoctor">Choose Doctor:</label>
-			<select name="searchDoctor" id="searchDoctor" ng-options="option.Name for option in searchdata.doctorlist track by option._id" ng-model="searchdata.selecteddoctor"></select>
+				<label for="searchDoctor">Choose Doctor:</label>
+				<select name="searchDoctor" id="searchDoctor" ng-options="option.Name for option in searchdata.doctorlist track by option._id" ng-model="searchdata.selecteddoctor"></select>
 
-			<label for="searchPatient">Choose Patient:</label>
-			<select name="searchPatient" id="searchPatient" ng-options="option.Name for option in searchdata.patientlist track by option._id" ng-model="searchdata.selectedpatient"></select>
+				<label for="searchPatient">Choose Patient:</label>
+				<select name="searchPatient" id="searchPatient" ng-options="option.Name for option in searchdata.patientlist track by option._id" ng-model="searchdata.selectedpatient"></select>
 
-			<label>Keyword</label><input type="text" ng-model="searchdata.textinput">
-		</div>
-<!-- 		<p>{{searchdata.selectedlocation}}</p>
-		<p>{{searchdata.selecteddoctor}}</p>
-		<p>{{searchdata.selectedpatient}}</p> -->
+				<label>Keyword</label><input type="text" ng-model="searchdata.textinput"> -->
+				<input type="checkbox" ng-model="searchdata.clinic"><label>&nbsp;Locations</label><br>
+				<input type="checkbox" ng-model="searchdata.doctor"><label>&nbsp;Doctors</label><br>
+				<input type="checkbox" ng-model="searchdata.patient"><label>&nbsp;Patients</label><br>
+				<input type="text" ng-model="searchdata.text" placeholder="Search Text"><br><br>
+				<button type="button" class="btn" ng-click="search()">Search</button>
 
-		<hr>
-		<h2>Browse</h2>
-		<!-- Browse	 
-			- list all clinics
-			- list all doctors and patients of a selected clinic
-			- list all patients of a selected doctor
-			- list all tags of a selected patient
-			- list all logs of a seleted tag
-		-->		
+				<div ng-if="searchdata.showresults" style="margin-top:30px">
+					<h3>Search Results</h3>
+					<div id="searchlist-clinic">
+						<h4>Locations</h4>
+						<div ng-if="!searchdata.cliniclist.length">No Clinics found</div>
+						<div ng-repeat="clinic in searchdata.cliniclist" style="margin-left:10px">
+							<p ng-click="getClinicChildren(clinic);clinic.showchildren = !clinic.showchildren;">{{clinic.Name}}</p>
+							<div ng-show="clinic.showchildren">
+								<div style="margin-left: 15px" ng-repeat="doctor in clinic.doctors" >
+									<p ng-click="getDoctorChildren(doctor); doctor.showchildren=!doctor.showchildren">{{doctor.Name}}</p>
+									<div ng-show="doctor.showchildren">
+										<div style="margin-left:30px" ng-repeat="patient in doctor.patients">
+											<p ng-click="getPatientSamples(patient); patient.showsamples = !patient.showsamples;">{{patient.Name}}</p>
+											<div ng-show="patient.showsamples">
+												<div style="margin-left:45px;" ng-repeat="sample in patient.samples" ng-click="page.setPage('map'); startMap(); showMarkers(sample); getMapTitle(clinic, doctor, patient, sample);">{{sample.tagUID}}</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- <span ng-repeat="doctor in searchdata.doctorlist | filter:browseclinic" ng-click="setDoctor(doctor);"></span> -->
+						<!-- <span ng-repeat="patient in searchdata.patientlist | filter:browsedoctor "></span> -->
+						<!-- filter browseclinic-->
+						<!-- <span ng-repeat="tag in searchdata.taglist | "></span> -->
+						<!-- all tags by clinic, all tags by doctor, all tags for patient -->
+						<!-- <span ng-repeat="loca in tagdata | filter:browsetag"></span> -->
+						<!-- all location elements for a specific tag -->
+					</div>
+					<hr>
+					<div id="searchlist-doctor">
+						<h4>Doctors</h4>
+						<div ng-if="!searchdata.doctorlist.length">No Doctors found</div>
+						<div ng-repeat="doctor in searchdata.doctorlist" style="margin-left:10px">
+							<p ng-click="getDoctorChildren(doctor); doctor.showchildren=!doctor.showchildren">{{doctor.Name}}</p>
+							<div ng-show="doctor.showchildren">
+								<div style="margin-left:15px" ng-repeat="patient in doctor.patients">
+									<p ng-click="getPatientSamples(patient); patient.showsamples = !patient.showsamples;">{{patient.Name}}</p>
+									<div ng-show="patient.showsamples">
+										<div style="margin-left:30px;" ng-repeat="sample in patient.samples" ng-click="page.setPage('map'); startMap(); showMarkers(sample); getMapTitle(null, doctor, patient, sample);">{{sample.tagUID}}</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- <span ng-repeat="doctor in searchdata.doctorlist | filter:browseclinic" ng-click="setDoctor(doctor);"></span> -->
+						<!-- <span ng-repeat="patient in searchdata.patientlist | filter:browsedoctor "></span> -->
+						<!-- filter browseclinic-->
+						<!-- <span ng-repeat="tag in searchdata.taglist | "></span> -->
+						<!-- all tags by clinic, all tags by doctor, all tags for patient -->
+						<!-- <span ng-repeat="loca in tagdata | filter:browsetag"></span> -->
+						<!-- all location elements for a specific tag -->
+					</div>
+					<hr>
+					<div id="searchlist-patient">
+						<h4>Patients</h4>
+						<div ng-if="!searchdata.patientlist.length">No Patients found</div>
+						<div ng-repeat="patient in searchdata.patientlist" style="margin-left:10px">
+							<p ng-click="getPatientSamples(patient); patient.showsamples = !patient.showsamples;">{{patient.Name}}</p>
+							<div ng-show="patient.showsamples">
+								<div style="margin-left:15px;" ng-repeat="sample in patient.samples" ng-click="page.setPage('map'); startMap(); showMarkers(sample); getMapTitle(null, null, patient, sample);">{{sample.tagUID}}</div>
+							</div>
+						</div>
+						<!-- <span ng-repeat="doctor in searchdata.doctorlist | filter:browseclinic" ng-click="setDoctor(doctor);"></span> -->
+						<!-- <span ng-repeat="patient in searchdata.patientlist | filter:browsedoctor "></span> -->
+						<!-- filter browseclinic-->
+						<!-- <span ng-repeat="tag in searchdata.taglist | "></span> -->
+						<!-- all tags by clinic, all tags by doctor, all tags for patient -->
+						<!-- <span ng-repeat="loca in tagdata | filter:browsetag"></span> -->
+						<!-- all location elements for a specific tag -->
+					</div>
+				</div>
 
-		<div id="browse">
-			<div ng-repeat="clinic in searchdata.cliniclist">
-				<p ng-click="getClinicChildren(clinic);clinic.showchildren = !clinic.showchildren;">{{clinic.Name}}</p>
-				<div ng-show="clinic.showchildren">
-					<div style="margin-left: 15px" ng-repeat="doctor in clinic.doctors" >
-						<p ng-click="getDoctorChildren(doctor); doctor.showchildren=!doctor.showchildren">{{doctor.Name}}</p>
-						<div ng-show="doctor.showchildren">
-							<div style="margin-left:30px" ng-repeat="patient in doctor.patients">
-								<p ng-click="getPatientSamples(patient); patient.showsamples = !patient.showsamples;">{{patient.Name}}</p>
-								<div ng-show="patient.showsamples">
-									<div style="margin-left:45px;" ng-repeat="sample in patient.samples">PUT SAMPLE INFO HERE</div>
+			</div>
+	<!-- 		<p>{{searchdata.selectedlocation}}</p>
+			<p>{{searchdata.selecteddoctor}}</p>
+			<p>{{searchdata.selectedpatient}}</p> -->
+
+
+			<div id="browse" ng-show="'browse' == page.curPage">
+				<h2>Browse</h2>
+				<!-- Browse	 
+					- list all clinics
+					- list all doctors and patients of a selected clinic
+					- list all patients of a selected doctor
+					- list all tags of a selected patient
+					- list all logs of a seleted tag
+				-->		
+
+				<div id="browse">
+					<div ng-repeat="clinic in browsedata">
+						<p ng-click="getClinicChildren(clinic);clinic.showchildren = !clinic.showchildren;">{{clinic.Name}}</p>
+						<div ng-show="clinic.showchildren">
+							<div style="margin-left: 15px" ng-repeat="doctor in clinic.doctors" >
+								<p ng-click="getDoctorChildren(doctor); doctor.showchildren=!doctor.showchildren">{{doctor.Name}}</p>
+								<div ng-show="doctor.showchildren">
+									<div style="margin-left:30px" ng-repeat="patient in doctor.patients">
+										<p ng-click="getPatientSamples(patient); patient.showsamples = !patient.showsamples;">{{patient.Name}}</p>
+										<div ng-show="patient.showsamples">
+											<div style="margin-left:45px;" ng-repeat="sample in patient.samples" ng-click="page.setPage('map'); startMap(); showMarkers(sample); getMapTitle(clinic, doctor, patient, sample);">{{sample.tagUID}}</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+					<!-- <span ng-repeat="doctor in searchdata.doctorlist | filter:browseclinic" ng-click="setDoctor(doctor);"></span> -->
+					<!-- <span ng-repeat="patient in searchdata.patientlist | filter:browsedoctor "></span> -->
+					<!-- filter browseclinic-->
+					<!-- <span ng-repeat="tag in searchdata.taglist | "></span> -->
+					<!-- all tags by clinic, all tags by doctor, all tags for patient -->
+					<!-- <span ng-repeat="loca in tagdata | filter:browsetag"></span> -->
+					<!-- all location elements for a specific tag -->
 				</div>
 			</div>
-			<span ng-repeat="doctor in searchdata.doctorlist | filter:browseclinic" ng-click="setDoctor(doctor);"></span>
-			<!-- <span ng-repeat="patient in searchdata.patientlist | filter:browsedoctor "></span> -->
-			<!-- filter browseclinic-->
-			<!-- <span ng-repeat="tag in searchdata.taglist | "></span> -->
-			<!-- all tags by clinic, all tags by doctor, all tags for patient -->
-			<!-- <span ng-repeat="loca in tagdata | filter:browsetag"></span> -->
-			<!-- all location elements for a specific tag -->
+			<!-- <div >Here is the full sample info : Click to view location information</div> -->
+
+			<!-- MAPS -->
+			<!-- <div ng-repeat="sample in searchdata.samplelist" ng-click="showMarkers(sample)">{{sample.tagUID}}</div> -->
+			<div ng-show="'map' == page.curPage">
+				<h2>Map</h2>
+				<h4>{{mapTitle}}</h4>
+
+				<div id="map"></div>
+				<div id="class" ng-repeat="marker in markers | orderBy : 'title'">
+					<a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
+				</div>
+			</div>
 		</div>
-		<hr>
-		<div >Here is the full sample info : Click to view location information</div>
-
-		<hr>
-		<!-- -->		
-
-		<!-- -->		
-
-
 	</body>
+		
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
 	<script type="text/javascript" src="/javascripts/pathology.js"></script>
 	<!--<script type="text/javascript" src="/javascripts/services.js"></script>-->
