@@ -246,39 +246,42 @@ router.post('/signup', function(req, res, next){
 		var coll = db.collection('users');
 		coll.insert({email:req.body.email, password:req.body.password, loggedon: true}, function(err, inserted){
 			if (err) throw err;
-			var local = {"userid":inserted[0]._id};
-			console.log(local);
-			res.send(local);
+			res.send({"userid":inserted[0]._id, "email":inserted[0].email});
 		});
 	});
 });
 
-router.post('/logon', function(req,res, next){
+router.post('/login', function(req,res, next){
+	var local = false;
 	MC.connect('mongodb://localhost/NFP', function(err, db){
 		if(err) throw err;
 		var coll = db.collection('users');
 		coll.find({email:req.body.email}, function(err, list){
 			if(list.length == 0){
-				res.sendStatus(404);
+				res.send({"not":"found"});
 			}else{
 				for(var i = 0; i < list.length; i++){
 					if(list[i].password == req.body.password){
+						local = true;
 						coll.update({_id:list[i]._id}, {$push:{loggedon: true}}, function(err, list){
 							if(err) throw err;
-							res.end(""+list[i]._id);
+							res.send({"userid":inserted[0]._id, "email":inserted[0].email});
 						});
 						break;
 					}
+				}
+				if(!local){
+					res.send({"not":"found"});
 				}
 			}
 		});
 	});
 });
 
-router.post('/logoff', function(req, res, next){
+router.post('/logout', function(req, res, next){
 	MC.connect('mongodb://localhost/NFP', function(err, db){
 		if(err) throw err;
-		var newId = ObjectID(req.params.userid);
+		var newId = ObjectID(req.body.userid);
 		var coll = db.collection('users');
 		coll.update({_id:newId}, {$push:{loggedon:false}}, function(err, list){
 			if(err) throw err;

@@ -76,8 +76,8 @@ app.controller('MainCtrl', ['$scope', 'urls', function($scope, urls){
 	// }
 
 	var mapOptions = {
-		zoom:12,
-		center: new google.maps.LatLng(40.276423, -111.723700),
+		zoom:10,
+		center: new google.maps.LatLng(40.2558333, -111.6379139),
 	}
 
 	$scope.startMap = function(){
