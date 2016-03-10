@@ -4,6 +4,8 @@ var MC = require('mongodb').MongoClient;
 var ObjectID = require('mongodb').ObjectID;
 var async = require('async');
 
+var uri = "mongodb://nfpuser:nfpAPPuser@40.78.57.211/NFP";
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
@@ -57,7 +59,7 @@ router.get('/dbtest', function(req, res, next){
 });
 
 router.get('/getlist/:coll', function(req, res, next){
-	MC.connect('mongodb://localhost/NFP', function(err, db){
+	MC.connect(uri, function(err, db){
 		if(err) throw err;
 		var coll = db.collection(req.params.coll);
 		coll.find(function(err, list){
@@ -69,7 +71,7 @@ router.get('/getlist/:coll', function(req, res, next){
 });
 
 router.get('/getdoctors/:clinicname', function(req, res, next){
-	MC.connect('mongodb://localhost/NFP', function(err, db){
+	MC.connect(uri, function(err, db){
 		if(err) throw err;
 		var coll = db.collection('doctor');
 		coll.find({Clinic:req.params.clinicname}, function(err, list){
@@ -81,7 +83,7 @@ router.get('/getdoctors/:clinicname', function(req, res, next){
 });
 
 router.get('/getpatients/:doctorid', function(req,res, next){
-	MC.connect('mongodb://localhost/NFP', function(err, db){
+	MC.connect(uri, function(err, db){
 		if(err) throw err;
 		var coll = db.collection('patient');
 		coll.find({Doctorid:req.params.doctorid}, function(err, list){
@@ -94,7 +96,7 @@ router.get('/getpatients/:doctorid', function(req,res, next){
 
 
 router.get('/getsamples/:Patientid', function(req,res,next){
-	MC.connect('mongodb://localhost/NFP', function(err, db){
+	MC.connect(uri, function(err, db){
 		if(err) throw err;
 		var coll = db.collection('sample');
 		coll.find({patientid:req.params.Patientid}, function(err, list){
@@ -106,7 +108,7 @@ router.get('/getsamples/:Patientid', function(req,res,next){
 });
 
 router.get('/getsample/:taguid', function(req,res,next){
-	MC.connect('mongodb://localhost/NFP', function(err, db){
+	MC.connect(uri, function(err, db){
 		if(err) throw err;
 		var coll = db.collection('sample');
 		coll.find({tagUID:req.params.taguid}, function(err, list){
@@ -118,7 +120,7 @@ router.get('/getsample/:taguid', function(req,res,next){
 });
 
 router.get('/getpatient/:Patientid', function(req,res,next){
-	MC.connect('mongodb://localhost/NFP', function(err, db){
+	MC.connect(uri, function(err, db){
 		if(err) throw err;
 		var coll = db.collection('patient');
 		var newId = ObjectID(req.params.Patientid);
@@ -192,7 +194,7 @@ router.post('/addsample', function(req, res, next){
 	// 	});
 	// });
 
-	MC.connect('mongodb://localhost/NFP', function(err, db){
+	MC.connect(uri, function(err, db){
 		if(err) throw err;
 		var coll = db.collection('sample');
 		// coll.count({tagUID:req.body.tagUID}, function(err, count){
@@ -228,7 +230,7 @@ router.post('/addtrackingstep/:tagUID', function(req, res, next){
 	localtracking.purpose = req.body.purpose;
 	localtracking.timestamp = req.body.timestamp;
 
-	MC.connect('mongodb://localhost/NFP', function(err, db){
+	MC.connect(uri, function(err, db){
 		if(err) throw err;
 		var coll = db.collection('sample');
 		coll.update({tagUID:req.params.tagUID}, {$push:{trackingSteps: localtracking}}, function(err, list){
@@ -241,7 +243,7 @@ router.post('/addtrackingstep/:tagUID', function(req, res, next){
 router.post('/signup', function(req, res, next){
 	console.log(req.body);
 	console.log(JSON.stringify(req.body));
-	MC.connect('mongodb://localhost/NFP', function(err, db){
+	MC.connect(uri, function(err, db){
 		if(err) throw err;
 		var coll = db.collection('users');
 		coll.insert({email:req.body.email, password:req.body.password, loggedon: true}, function(err, inserted){
@@ -253,7 +255,7 @@ router.post('/signup', function(req, res, next){
 
 router.post('/login', function(req,res, next){
 	var local = false;
-	MC.connect('mongodb://localhost/NFP', function(err, db){
+	MC.connect(uri, function(err, db){
 		if(err) throw err;
 		var coll = db.collection('users');
 		coll.find({email:req.body.email}, function(err, list){
@@ -279,7 +281,7 @@ router.post('/login', function(req,res, next){
 });
 
 router.post('/logout', function(req, res, next){
-	MC.connect('mongodb://localhost/NFP', function(err, db){
+	MC.connect(uri, function(err, db){
 		if(err) throw err;
 		var newId = ObjectID(req.body.userid);
 		var coll = db.collection('users');
@@ -294,7 +296,7 @@ router.post("/search", function(req, res, next){
 	//http://www.kdelemme.com/2014/07/28/read-multiple-collections-mongodb-avoid-callback-hell/
 	//https://github.com/caolan/async
 	// console.log(req.body);
-	MC.connect('mongodb://localhost/NFP', function(err, db){
+	MC.connect(uri, function(err, db){
 		async.parallel([
 			function(callback){
 				if(req.body.clinic){
