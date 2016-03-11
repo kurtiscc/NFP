@@ -61,6 +61,7 @@ router.get('/dbtest', function(req, res, next){
 
 router.get('/getlist/:coll', function(req, res, next){
 	MC.connect(MongoConnectionString, function(err, db){
+		//console log all errors
 		if(err) console.log(err);
 		var coll = db.collection(req.params.coll);
 		coll.find(function(err, list){
