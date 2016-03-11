@@ -7,7 +7,7 @@ var async = require('async');
 //var MongoConnectionString = "mongodb://nfpuser:nfpAPPuser@40.78.57.211:27017/NFP";
 //MongoConnectionString
 // var MongoConnectionString = "mongodb://localhost:27017/NFP";
-var MongoConnectionString = "mongodb://10.0.0.6:27017/NFP";
+var MongoConnectionString = "mongodb://40.78.58.204:27017/NFP";
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
