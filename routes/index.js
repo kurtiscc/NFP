@@ -4,7 +4,7 @@ var MC = require('mongodb').MongoClient;
 var ObjectID = require('mongodb').ObjectID;
 var async = require('async');
 
-var uri = "mongodb://nfpuser:nfpAPPuser@40.78.57.211/NFP";
+var uri = "mongodb://nfpuser:nfpAPPuser@40.78.57.211:27017/NFP";
 MongoConnectionString
 
 /* GET home page. */
