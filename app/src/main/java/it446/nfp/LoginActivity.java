@@ -88,7 +88,7 @@ public class LoginActivity extends AppCompatActivity {
         } catch (JSONException e) {
 
         }
-        String url = "http://nfp.capstone.it.et.byu.edu/login";
+        String url = "http://nfp-project.azurewebsites.net/login";
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
                 url, jsonBody,

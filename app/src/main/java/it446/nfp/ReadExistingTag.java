@@ -96,8 +96,8 @@ public class ReadExistingTag extends AppCompatActivity implements OnMapReadyCall
     //private LinearLayout trackingHistory;
     private ProgressDialog pDialog;
     private static String TAG = SearchBrowse.class.getSimpleName();
-    private String urlJsonArryPatient = "http://nfp.capstone.it.et.byu.edu/getlist/patient";
-    private String urlJsonArraySample = "http://nfp.capstone.it.et.byu.edu/getsample/";
+    private String urlJsonArryPatient = "http://nfp-project.azurewebsites.net/getlist/patient";
+    private String urlJsonArraySample = "http://nfp-project.azurewebsites.net/getsample/";
     Button scanTag;
     private boolean isToScan = false;
     PendingIntent pendingIntent;
