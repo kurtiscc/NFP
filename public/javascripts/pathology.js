@@ -74,7 +74,10 @@ app.controller('MainCtrl', ['$scope', 'urls', function($scope, urls){
 	// 		zoom: 12
 	// 	});
 	// }
-
+	
+	window.google = window.google || {};
+	google.maps = google.maps || {};
+	
 	var mapOptions = {
 		zoom:10,
 		center: new google.maps.LatLng(40.2558333, -111.6379139),
