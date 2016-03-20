@@ -10,3 +10,16 @@ a {
 	width: 500px;
 	height: 400px;
 }
+
+.clinic-row{
+	background-color:blue;
+}
+.doctor-row{
+	background-color:red;	
+}
+.patient-row{
+	background-color:green;
+}
+.sample-row{
+	background-color:purple;
+}
