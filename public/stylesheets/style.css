@@ -10,7 +10,16 @@ a {
 	width: 500px;
 	height: 400px;
 }
-
+#browse{
+	width:50%;
+}
+#browse p{
+	line-height:3;
+	height:45px;
+}
+#browse div{
+	border-bottom: 1px solid gray;
+}
 .clinic-row{
 	background-color:blue;
 }
