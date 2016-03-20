@@ -142,15 +142,15 @@
 				-->		
 
 				<div id="browse">
-					<div ng-repeat="clinic in browsedata">
+					<div ng-repeat="clinic in browsedata" class="clinic-row">
 						<p ng-click="getClinicChildren(clinic);clinic.showchildren = !clinic.showchildren;">{{clinic.Name}}</p>
-						<div ng-show="clinic.showchildren">
+						<div ng-show="clinic.showchildren" class="doctor-row">
 							<div style="margin-left: 15px" ng-repeat="doctor in clinic.doctors" >
 								<p ng-click="getDoctorChildren(doctor); doctor.showchildren=!doctor.showchildren">{{doctor.Name}}</p>
-								<div ng-show="doctor.showchildren">
+								<div ng-show="doctor.showchildren" class="patient-row">
 									<div style="margin-left:30px" ng-repeat="patient in doctor.patients">
 										<p ng-click="getPatientSamples(patient); patient.showsamples = !patient.showsamples;">{{patient.Name}}</p>
-										<div ng-show="patient.showsamples">
+										<div ng-show="patient.showsamples" c;ass="sample-row">
 											<div style="margin-left:45px;" ng-repeat="sample in patient.samples" ng-click="page.setPage('map'); startMap(); showMarkers(sample); getMapTitle(clinic, doctor, patient, sample);">{{sample.tagUID}}</div>
 										</div>
 									</div>
