@@ -150,7 +150,7 @@
 								<div ng-show="doctor.showchildren" class="patient-row">
 									<div style="margin-left:30px" ng-repeat="patient in doctor.patients">
 										<p ng-click="getPatientSamples(patient); patient.showsamples = !patient.showsamples;">{{patient.Name}}</p>
-										<div ng-show="patient.showsamples" c;ass="sample-row">
+										<div ng-show="patient.showsamples" class="sample-row">
 											<div style="margin-left:45px;" ng-repeat="sample in patient.samples" ng-click="page.setPage('map'); startMap(); showMarkers(sample); getMapTitle(clinic, doctor, patient, sample);">{{sample.tagUID}}</div>
 										</div>
 									</div>
