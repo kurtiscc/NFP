@@ -141,16 +141,16 @@
 					- list all logs of a seleted tag
 				-->		
 
-				<div id="browse">
-					<div ng-repeat="clinic in browsedata" class="clinic-row">
+				<div id="">
+					<div ng-repeat="clinic in browsedata" class="">
 						<p ng-click="getClinicChildren(clinic);clinic.showchildren = !clinic.showchildren;">{{clinic.Name}}</p>
-						<div ng-show="clinic.showchildren" class="doctor-row">
+						<div ng-show="clinic.showchildren" class="">
 							<div style="margin-left: 15px" ng-repeat="doctor in clinic.doctors" >
 								<p ng-click="getDoctorChildren(doctor); doctor.showchildren=!doctor.showchildren">{{doctor.Name}}</p>
-								<div ng-show="doctor.showchildren" class="patient-row">
+								<div ng-show="doctor.showchildren" class="">
 									<div style="margin-left:30px" ng-repeat="patient in doctor.patients">
 										<p ng-click="getPatientSamples(patient); patient.showsamples = !patient.showsamples;">{{patient.Name}}</p>
-										<div ng-show="patient.showsamples" class="sample-row">
+										<div ng-show="patient.showsamples" class="">
 											<div style="margin-left:45px;" ng-repeat="sample in patient.samples" ng-click="page.setPage('map'); startMap(); showMarkers(sample); getMapTitle(clinic, doctor, patient, sample);">{{sample.tagUID}}</div>
 										</div>
 									</div>
