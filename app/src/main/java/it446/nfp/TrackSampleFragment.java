@@ -1,6 +1,7 @@
 package it446.nfp;
 
 import android.Manifest;
+import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
@@ -23,12 +24,15 @@ import android.nfc.tech.NfcF;
 import android.nfc.tech.NfcV;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -47,14 +51,14 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-
-
+import static android.support.v4.content.ContextCompat.checkSelfPermission;
 
 /**
- * Created by Philip on 2/4/2016.
+ * Created by ChristensenKC on 3/29/2016.
  */
-public class TrackSampleActiviy extends AppCompatActivity {
+public class TrackSampleFragment extends Fragment {
 
+    private Context context;
     private TextView valueUID;
     private TextView valueLastScanned;
     private TextView valueLastLocation;
@@ -77,6 +81,10 @@ public class TrackSampleActiviy extends AppCompatActivity {
     Intent myIntent;
 
     private MainActivity mainActFunction;
+
+    public TrackSampleFragment() {
+        // Required empty public constructor
+    }
 
     // list of NFC technologies detected:
     private final String[][] techList = new String[][]{
@@ -113,7 +121,7 @@ public class TrackSampleActiviy extends AppCompatActivity {
 
             double latitude = location.getLatitude();
             double longitude = location.getLongitude();
-            Geocoder gc = new Geocoder(this, Locale.getDefault());
+            Geocoder gc = new Geocoder(context, Locale.getDefault());
 
             try {
                 List<Address> addresses = gc.getFromLocation(latitude, longitude, 1);
@@ -147,23 +155,24 @@ public class TrackSampleActiviy extends AppCompatActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_track_sample);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.activity_track_sample, container, false);
+        context = rootView.getContext();
 
-        nfcAdapter = NfcAdapter.getDefaultAdapter(this);
+        nfcAdapter = NfcAdapter.getDefaultAdapter(context);
 
-        valueTime = (TextView) findViewById(R.id.valueTime);
-        valueLatitude = (TextView) findViewById(R.id.valueLatitude);
-        valueLongitude = (TextView) findViewById(R.id.valueLongitude);
+        valueTime = (TextView) rootView.findViewById(R.id.valueTime);
+        valueLatitude = (TextView) rootView.findViewById(R.id.valueLatitude);
+        valueLongitude = (TextView) rootView.findViewById(R.id.valueLongitude);
+        scanTag = (Button) rootView.findViewById(R.id.scanTag);
 
-        final Button scanTagButton = (Button) findViewById(R.id.scanTag);
+        final Button scanTagButton = (Button) rootView.findViewById(R.id.scanTag);
         scanTagButton.setBackgroundColor(0xff888888);
         scanTagButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 isToScan = true;
-                scanTag = (Button) findViewById(R.id.scanTag);
                 scanTag.setText("Scanning");
                 scanTag.setBackgroundColor(0xff00ff00);
                 getCurrentTimeStamp();
@@ -177,12 +186,12 @@ public class TrackSampleActiviy extends AppCompatActivity {
 
 
         //valueAddress = (TextView) findViewById(R.id.valueAddress);
-        submitTag = (Button) findViewById(R.id.submitTag);
+        submitTag = (Button) rootView.findViewById(R.id.submitTag);
 
 
         LocationManager locationManager;
         String svcName = Context.LOCATION_SERVICE;
-        locationManager = (LocationManager) getSystemService(svcName);
+        locationManager = (LocationManager) context.getSystemService(svcName);
 
         Criteria criteria = new Criteria();
         criteria.setAccuracy(Criteria.ACCURACY_FINE);
@@ -195,8 +204,8 @@ public class TrackSampleActiviy extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= 23) {
 
             if (locationManager != null) {
-                if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
-                        || checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                if (checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
+                        || checkSelfPermission(context, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
                     String provider = locationManager.getBestProvider(criteria, true);
 
                     Location l = locationManager.getLastKnownLocation(provider);
@@ -228,31 +237,13 @@ public class TrackSampleActiviy extends AppCompatActivity {
             }
         });
 
-    }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_home_button, menu);
-        return true;
-    }
+        return rootView;
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == android.R.id.home) {
-            NavUtils.navigateUpFromSameTask(this);
-        }
-        else if (id == R.id.action_go_home) {
-            goHome();
-        }
-        return true;
     }
 
     public void goHome() {
-        Intent intent = new Intent(TrackSampleActiviy.this, HomeActivity.class);
+        Intent intent = new Intent(getActivity().getApplication(), HomeActivity.class);
         startActivity(intent);
     }
 
@@ -306,7 +297,7 @@ public class TrackSampleActiviy extends AppCompatActivity {
                 ApplicationController.getInstance().addToRequestQueue(jsonObjectRequest);
             }
         }
-        Toast.makeText(TrackSampleActiviy.this, "Sample Tracked", Toast.LENGTH_SHORT)
+        Toast.makeText(getActivity().getApplication(), "Sample Tracked", Toast.LENGTH_SHORT)
                 .show();
     }
 
@@ -315,58 +306,52 @@ public class TrackSampleActiviy extends AppCompatActivity {
         isToScan = true;
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
+//    @Override
+//    protected void onResume() {
+//        super.onResume();
+//
+//        if (nfcAdapter != null) {
+//
+//            PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, new Intent(context, getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), 0);
+//            // creating intent receiver for NFC events:
+//            IntentFilter filter = new IntentFilter();
+//            filter.addAction(NfcAdapter.ACTION_TAG_DISCOVERED);
+//            filter.addAction(NfcAdapter.ACTION_NDEF_DISCOVERED);
+//            filter.addAction(NfcAdapter.ACTION_TECH_DISCOVERED);
+//            // enabling foreground dispatch for getting intent from NFC event:
+//            NfcAdapter nfcAdapter = NfcAdapter.getDefaultAdapter(context);
+//            nfcAdapter.enableForegroundDispatch((Activity) context, pendingIntent, new IntentFilter[]{filter}, this.techList);
+//        }
+//    }
+//
+//    @Override
+//    public void onPause(Context context) {
+//
+//        if (nfcAdapter != null) {
+//            nfcAdapter.disableForegroundDispatch(this);
+//        }
+//
+//        super.onPause();
+//    }
+//
+//    @Override
+//    public void onNewIntent(Intent intent) {
+//        myIntent = intent;
+//        valueUID = (TextView) rootView.findViewById(R.id.valueUID);
+//
+//        if (isToScan && intent.hasExtra(NfcAdapter.EXTRA_TAG)) {
+//            isToScan = false;
+//            scanTag = (Button) rootView.findViewById(R.id.scanTag);
+//            scanTag.setText("Scan Tag");
+//            scanTag.setBackgroundColor(0xff888888);
+//
+//            if (intent.getAction().equals(NfcAdapter.ACTION_TAG_DISCOVERED)) {
+//                tagUID = MainActivity.ByteArrayToHexString(intent.getByteArrayExtra(NfcAdapter.EXTRA_ID));
+//                valueUID.setText(tagUID);
+//
+//            }
+//        }
+//    }
 
-        if (nfcAdapter != null) {
 
-            PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, new Intent(this, getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), 0);
-            // creating intent receiver for NFC events:
-            IntentFilter filter = new IntentFilter();
-            filter.addAction(NfcAdapter.ACTION_TAG_DISCOVERED);
-            filter.addAction(NfcAdapter.ACTION_NDEF_DISCOVERED);
-            filter.addAction(NfcAdapter.ACTION_TECH_DISCOVERED);
-            // enabling foreground dispatch for getting intent from NFC event:
-            NfcAdapter nfcAdapter = NfcAdapter.getDefaultAdapter(this);
-            nfcAdapter.enableForegroundDispatch(this, pendingIntent, new IntentFilter[]{filter}, this.techList);
-        }
-    }
-
-    @Override
-    protected void onPause() {
-
-        if (nfcAdapter != null) {
-            nfcAdapter.disableForegroundDispatch(this);
-        }
-
-        super.onPause();
-    }
-
-    @Override
-
-    public void onNewIntent(Intent intent) {
-        myIntent = intent;
-        valueUID = (TextView) findViewById(R.id.valueUID);
-        //valueName = (TextView) findViewById(R.id.valueName);
-        //valueDOB = (TextView) findViewById(R.id.valueDOB);
-//        valueClinic = (TextView) findViewById(R.id.valueClinic);
-//        valueLastScanned = (TextView) findViewById(R.id.valueLastScanned);
-//        valueLastLocation = (TextView) findViewById(R.id.valueLastLocation);
-
-        if (isToScan && intent.hasExtra(NfcAdapter.EXTRA_TAG)) {
-            isToScan = false;
-            scanTag = (Button) findViewById(R.id.scanTag);
-            scanTag.setText("Scan Tag");
-            scanTag.setBackgroundColor(0xff888888);
-
-            if (intent.getAction().equals(NfcAdapter.ACTION_TAG_DISCOVERED)) {
-                tagUID = MainActivity.ByteArrayToHexString(intent.getByteArrayExtra(NfcAdapter.EXTRA_ID));
-                valueUID.setText(tagUID);
-
-            }
-        }
-    }
 }
-
-

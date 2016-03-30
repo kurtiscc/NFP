@@ -106,7 +106,7 @@ public class ViewDoctorActivity extends AppCompatActivity {
     }
 
     public void goHome() {
-        Intent intent = new Intent(ViewDoctorActivity.this, HomePage.class);
+        Intent intent = new Intent(ViewDoctorActivity.this, HomeActivity.class);
         startActivity(intent);
     }
 

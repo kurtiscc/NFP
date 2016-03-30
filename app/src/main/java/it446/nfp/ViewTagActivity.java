@@ -82,7 +82,7 @@ public class ViewTagActivity extends AppCompatActivity {
     }
 
     public void goHome() {
-        Intent intent = new Intent(ViewTagActivity.this, HomePage.class);
+        Intent intent = new Intent(ViewTagActivity.this, HomeActivity.class);
         startActivity(intent);
     }
 

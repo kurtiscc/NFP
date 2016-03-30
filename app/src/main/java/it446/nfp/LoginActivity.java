@@ -79,44 +79,53 @@ public class LoginActivity extends AppCompatActivity {
         String userName = mUserName.getText().toString().trim();
         final String password = mPassword.getText().toString().trim();
 
-        JSONObject jsonBody = new JSONObject();
-
-        try {
-            jsonBody.put("email", userName);
-            jsonBody.put("password", password);
-
-        } catch (JSONException e) {
-
+        if(userName.equals("admin") && password.equals("admin")) {
+            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+            startActivity(intent);
         }
-        String url = "http://nfp-project.azurewebsites.net/login";
-
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
-                url, jsonBody,
-                new Response.Listener<JSONObject>() {
-
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        Log.d("Response", response.toString());
-                        String user_id = response.toString();
-                        Intent intent = new Intent(LoginActivity.this, HomePage.class);
-                        intent.putExtra("user_id",user_id);
-                        startActivity(intent);
-                    }
-                }, new Response.ErrorListener() {
-
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.d("Response: ", error.toString());
-            }
-        });
-
-        if (ApplicationController.getInstance() == null) {
-            Log.d("TEST", "here");
-        } else {
-            ApplicationController.getInstance().addToRequestQueue(jsonObjectRequest);
-        }
-        Toast.makeText(LoginActivity.this, "Your User Has Been Logged In...", Toast.LENGTH_SHORT)
+        else {
+            Toast.makeText(LoginActivity.this, "Invalid Credentials", Toast.LENGTH_SHORT)
                 .show();
+        }
+
+//        JSONObject jsonBody = new JSONObject();
+//
+//        try {
+//            jsonBody.put("email", userName);
+//            jsonBody.put("password", password);
+//
+//        } catch (JSONException e) {
+//
+//        }
+//        String url = "http://nfp-project.azurewebsites.net/login";
+//
+//        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
+//                url, jsonBody,
+//                new Response.Listener<JSONObject>() {
+//
+//                    @Override
+//                    public void onResponse(JSONObject response) {
+//                        Log.d("Response", response.toString());
+//                        String user_id = response.toString();
+//                        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+//                        intent.putExtra("user_id",user_id);
+//                        startActivity(intent);
+//                    }
+//                }, new Response.ErrorListener() {
+//
+//            @Override
+//            public void onErrorResponse(VolleyError error) {
+//                Log.d("Response: ", error.toString());
+//            }
+//        });
+//
+//        if (ApplicationController.getInstance() == null) {
+//            Log.d("TEST", "here");
+//        } else {
+//            ApplicationController.getInstance().addToRequestQueue(jsonObjectRequest);
+//        }
+//        Toast.makeText(LoginActivity.this, "Your User Has Been Logged In...", Toast.LENGTH_SHORT)
+//                .show();
 
 
         if (userName.equals("")) {

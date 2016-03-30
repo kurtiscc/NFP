@@ -298,7 +298,7 @@ public class ReadExistingTag extends AppCompatActivity implements OnMapReadyCall
     }
 
     public void goHome() {
-        Intent intent = new Intent(ReadExistingTag.this, HomePage.class);
+        Intent intent = new Intent(ReadExistingTag.this, HomeActivity.class);
         startActivity(intent);
     }
 

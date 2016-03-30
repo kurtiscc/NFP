@@ -95,7 +95,7 @@ public class SearchBrowse extends AppCompatActivity{
     }
 
     public void goHome() {
-        Intent intent = new Intent(SearchBrowse.this, HomePage.class);
+        Intent intent = new Intent(SearchBrowse.this, HomeActivity.class);
         startActivity(intent);
     }
 

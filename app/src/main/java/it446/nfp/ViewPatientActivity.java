@@ -85,7 +85,7 @@ public class ViewPatientActivity extends AppCompatActivity {
     }
 
     public void goHome() {
-        Intent intent = new Intent(ViewPatientActivity.this, HomePage.class);
+        Intent intent = new Intent(ViewPatientActivity.this, HomeActivity.class);
         startActivity(intent);
     }
 

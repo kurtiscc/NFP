@@ -83,7 +83,7 @@ public class PatientProfileActivity extends AppCompatActivity {
     }
 
     public void goHome() {
-        Intent intent = new Intent(PatientProfileActivity.this, HomePage.class);
+        Intent intent = new Intent(PatientProfileActivity.this, HomeActivity.class);
         startActivity(intent);
     }
 }

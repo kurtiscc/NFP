@@ -2,67 +2,81 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Philip\StudioProjects\NFP5\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="C:\Users\Philip\StudioProjects\NFP5\app\build\intermediates\pre-dexed\debug\classes-960481f74fb53b67fb4710943544ec4d9e3d3b63.jar" />
-    </item>
-    <item
-        jar="C:\Users\Philip\StudioProjects\NFP5\app\build\intermediates\exploded-aar\com.mcxiaoke.volley\library-aar\1.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="e40b9a81989bd4a846018551c280f8c4d837bf2e">
-        <dex dex="C:\Users\Philip\StudioProjects\NFP5\app\build\intermediates\pre-dexed\debug\classes-0fad14a930bedc7d6c9dbb66de21ec22d6a4c7f4.jar" />
-    </item>
-    <item
-        jar="C:\Users\Philip\StudioProjects\NFP5\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="04de44f90606c77f3b28cf44861f306290505aac">
-        <dex dex="C:\Users\Philip\StudioProjects\NFP5\app\build\intermediates\pre-dexed\debug\classes-7a05bff2730c36be478c3f8bdaac287d30867a26.jar" />
-    </item>
-    <item
-        jar="C:\Users\Philip\StudioProjects\NFP5\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
-        <dex dex="C:\Users\Philip\StudioProjects\NFP5\app\build\intermediates\pre-dexed\debug\classes-bdc2a0bf1e646fd3684c60a29132137e8b1901b1.jar" />
-    </item>
-    <item
-        jar="C:\Users\Philip\StudioProjects\NFP5\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.4.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="a8412b654dab86d57bf90683367488211c8a81f1">
-        <dex dex="C:\Users\Philip\StudioProjects\NFP5\app\build\intermediates\pre-dexed\debug\classes-e1b69d71d2abeca5ea1a6256c1e16bc181dd3f2f.jar" />
-    </item>
-    <item
-        jar="C:\Users\Philip\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="C:\Users\Philip\StudioProjects\NFP5\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-b463ab5a72574b5ff13a1c532cf042386b5dea75.jar" />
-    </item>
-    <item
-        jar="C:\Users\Philip\StudioProjects\NFP5\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="C:\Users\Philip\StudioProjects\NFP5\app\build\intermediates\pre-dexed\debug\classes-88fe83313d2f957fdb3fcb2ddde22830177ea914.jar" />
-    </item>
-    <item
-        jar="C:\Users\Philip\StudioProjects\NFP5\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
+        jar="C:\Users\christensenkc\Documents\GitHub\NFP\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
-        <dex dex="C:\Users\Philip\StudioProjects\NFP5\app\build\intermediates\pre-dexed\debug\classes-e6b41c1a099d4c970f2ec1000d4437405577f220.jar" />
+        <dex dex="C:\Users\christensenkc\Documents\GitHub\NFP\app\build\intermediates\pre-dexed\debug\classes-b1cf48202d5ad9ad142715775096f2c8267e1acd.jar" />
     </item>
     <item
-        jar="C:\Users\Philip\StudioProjects\NFP5\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jar="C:\Users\christensenkc\Documents\GitHub\NFP\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="C:\Users\Philip\StudioProjects\NFP5\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-fd7544e24899fbf481d860abfc19767385ccb905.jar" />
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="C:\Users\christensenkc\Documents\GitHub\NFP\app\build\intermediates\pre-dexed\debug\classes-392e4c0dd84e36542d0d754c5b755d8f152298d7.jar" />
+    </item>
+    <item
+        jar="C:\Users\christensenkc\Documents\GitHub\NFP\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="C:\Users\christensenkc\Documents\GitHub\NFP\app\build\intermediates\pre-dexed\debug\classes-094bc2515b95dafaf45a48ae88c3d8b01470402c.jar" />
+    </item>
+    <item
+        jar="C:\Users\christensenkc\Documents\GitHub\NFP\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="C:\Users\christensenkc\Documents\GitHub\NFP\app\build\intermediates\pre-dexed\debug\classes-fac20fee03c2af795352a6c1d8178ade30a09a7a.jar" />
+    </item>
+    <item
+        jar="C:\Users\christensenkc\Documents\GitHub\NFP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="C:\Users\christensenkc\Documents\GitHub\NFP\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1-3f9070af65695fe006830a2a586778fbbcd19f32.jar" />
+    </item>
+    <item
+        jar="C:\Users\christensenkc\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="C:\Users\christensenkc\Documents\GitHub\NFP\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1-0f39a197fcfed3bd73c66014e16d56e40e767e73.jar" />
+    </item>
+    <item
+        jar="C:\Users\christensenkc\Documents\GitHub\NFP\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="C:\Users\christensenkc\Documents\GitHub\NFP\app\build\intermediates\pre-dexed\debug\classes-bde371d2c469081f84efe89f4b6cce3ba6980211.jar" />
+    </item>
+    <item
+        jar="C:\Users\christensenkc\Documents\GitHub\NFP\app\build\intermediates\exploded-aar\com.mcxiaoke.volley\library-aar\1.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e40b9a81989bd4a846018551c280f8c4d837bf2e">
+        <dex dex="C:\Users\christensenkc\Documents\GitHub\NFP\app\build\intermediates\pre-dexed\debug\classes-2533cc781de64b029dd0ce7c5236ed5256499f0d.jar" />
+    </item>
+    <item
+        jar="C:\Users\christensenkc\Documents\GitHub\NFP\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="a8412b654dab86d57bf90683367488211c8a81f1">
+        <dex dex="C:\Users\christensenkc\Documents\GitHub\NFP\app\build\intermediates\pre-dexed\debug\classes-632707e4070ca75d0089410bbe06169cb15796e7.jar" />
+    </item>
+    <item
+        jar="C:\Users\christensenkc\Documents\GitHub\NFP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="C:\Users\christensenkc\Documents\GitHub\NFP\app\build\intermediates\pre-dexed\debug\classes-0f5df64d1c943f9aab28c085d634fdfe9e580745.jar" />
+    </item>
+    <item
+        jar="C:\Users\christensenkc\Documents\GitHub\NFP\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="04de44f90606c77f3b28cf44861f306290505aac">
+        <dex dex="C:\Users\christensenkc\Documents\GitHub\NFP\app\build\intermediates\pre-dexed\debug\classes-6e15dda7caef0f37b865ca044893d1d05b337a85.jar" />
     </item>
 
 </items>

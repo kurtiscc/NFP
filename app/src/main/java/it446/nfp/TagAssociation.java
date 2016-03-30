@@ -304,7 +304,7 @@ public class TagAssociation extends AppCompatActivity {
     }
 
     public void goHome() {
-        Intent intent = new Intent(TagAssociation.this, HomePage.class);
+        Intent intent = new Intent(TagAssociation.this, HomeActivity.class);
         startActivity(intent);
     }
 

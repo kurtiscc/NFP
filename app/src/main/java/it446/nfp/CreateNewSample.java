@@ -438,7 +438,7 @@ public class CreateNewSample extends AppCompatActivity{
     }
 
     public void goHome() {
-        Intent intent = new Intent(CreateNewSample.this, HomePage.class);
+        Intent intent = new Intent(CreateNewSample.this, HomeActivity.class);
         startActivity(intent);
     }
 
