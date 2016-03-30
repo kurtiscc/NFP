@@ -75,8 +75,8 @@ app.controller('MainCtrl', ['$scope', 'urls', function($scope, urls){
 	// 	});
 	// }
 	
-	window.google = window.google || {};
-	google.maps = google.maps || {};
+//	window.google = window.google || {};
+//	google.maps = google.maps || {};
 	
 	var mapOptions = {
 		zoom:10,
