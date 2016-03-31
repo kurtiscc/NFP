@@ -11,7 +11,8 @@ var MongoConnectionString = "mongodb://40.78.58.204:27017/NFP";
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  //res.render('index', { title: 'Express' });
+  res.render('splash');
 });
 
 router.get('/map', function(req, res, next){
