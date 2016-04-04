@@ -3,17 +3,17 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Track Sample" />
+        <item
             android:id="@+id/nav_zoom"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Search/Browse" />
+            android:title="Create Sample" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Read Existing Sample" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Create New Sample" />
     </group>
 
 

@@ -335,7 +335,7 @@ public class TagAssociation extends AppCompatActivity {
             } catch (JSONException e) {
 
             }
-            String url = "http://nfp-project.azurewebsites.net/addsample";
+            String url = "http://40.78.58.204/addsample";
 
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
                     url, jsonBody,

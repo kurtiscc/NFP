@@ -69,7 +69,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_zoom) {
+        if(id == R.id.nav_gallery) {
+            Intent intent = new Intent(HomeActivity.this, TrackSampleActiviy.class);
+            startActivity(intent);
+
+        } else if (id == R.id.nav_zoom) {
             Intent intent = new Intent(HomeActivity.this, SearchBrowse.class);
             startActivity(intent);
 
@@ -77,13 +81,12 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             Intent intent = new Intent(HomeActivity.this, ReadExistingTag.class);
             startActivity(intent);
 
-        } else if (id == R.id.nav_manage) {
-            Intent intent = new Intent(HomeActivity.this, CreateNewSample.class);
-            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
 }

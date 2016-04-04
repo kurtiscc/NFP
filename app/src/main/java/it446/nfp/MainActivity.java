@@ -296,7 +296,7 @@ public class MainActivity extends AppCompatActivity {
             } catch (JSONException e) {
 
             }
-            String url = "http://nfp-project.azurewebsites.net/addtag";
+            String url = "http://40.78.58.204/addtag";
 
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
                     url, jsonBody,

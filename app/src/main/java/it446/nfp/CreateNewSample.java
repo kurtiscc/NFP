@@ -64,9 +64,9 @@ public class CreateNewSample extends AppCompatActivity{
     private ArrayAdapter<String> adapter;
     String item[];
 
-    private String urlJsonArryPatient = "http://nfp-project.azurewebsites.net/getlist/patient";
-    private String urlJsonArryDoctor = "http://nfp-project.azurewebsites.net/doctor";
-    private String urlJsonArryNurse = "http://nfp-project.azurewebsites.net/getlist/nurse";
+    private String urlJsonArryPatient = "http://40.78.58.204/getlist/patient";
+    private String urlJsonArryDoctor = "http://40.78.58.204/doctor";
+    private String urlJsonArryNurse = "http://40.78.58.204/getlist/nurse";
     private static String TAG = SearchBrowse.class.getSimpleName();
     // temporary string to show the parsed response
     private String jsonResponsePatient;

@@ -32,7 +32,7 @@ public class GetObjects extends AppCompatActivity {
 
 
     // json array response url
-    private static String urlJsonArry = "http://nfp-project.azurewebsites.net/";
+    private static String urlJsonArry = "http://40.78.58.204/";
     private static String urlGetDocArray = urlJsonArry+"getlist/doctor";
     private static String TAG = ViewDoctorActivity.class.getSimpleName();
     // temporary string to show the parsed response

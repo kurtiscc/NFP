@@ -36,7 +36,7 @@ public class ViewTagActivity extends AppCompatActivity {
     private ListView searchResultListView;
 
     // json array response url
-    private String urlJsonArry = "http://nfp-project.azurewebsites.net/getlist/tag";
+    private String urlJsonArry = "http://40.78.58.204/getlist/tag";
     private static String TAG = ViewTagActivity.class.getSimpleName();
     // temporary string to show the parsed response
     private String jsonResponse;

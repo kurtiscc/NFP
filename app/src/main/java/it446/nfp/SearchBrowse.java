@@ -43,7 +43,7 @@ public class SearchBrowse extends AppCompatActivity{
     private ListView searchResultListView;
 
     // json array response url
-    private String urlJsonArry = "http://nfp-project.azurewebsites.net/getlist/clinic";
+    private String urlJsonArry = "http://40.78.58.204/getlist/clinic";
     private static String TAG = SearchBrowse.class.getSimpleName();
     // temporary string to show the parsed response
     private String jsonResponse;

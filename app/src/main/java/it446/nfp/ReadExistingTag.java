@@ -96,8 +96,8 @@ public class ReadExistingTag extends AppCompatActivity implements OnMapReadyCall
     //private LinearLayout trackingHistory;
     private ProgressDialog pDialog;
     private static String TAG = SearchBrowse.class.getSimpleName();
-    private String urlJsonArryPatient = "http://nfp-project.azurewebsites.net/getlist/patient";
-    private String urlJsonArraySample = "http://nfp-project.azurewebsites.net/getsample/";
+    private String urlJsonArryPatient = "http://40.78.58.204/getlist/patient";
+    private String urlJsonArraySample = "http://40.78.58.204/getsample/";
     Button scanTag;
     private boolean isToScan = false;
     PendingIntent pendingIntent;
@@ -273,7 +273,7 @@ public class ReadExistingTag extends AppCompatActivity implements OnMapReadyCall
 //                .title("Marker in Provo")
 //                .visible(false)
 //        );
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(lat, lng), 11.0f));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(lat, lng), 5.0f));
         //}
     }
     @Override
@@ -518,6 +518,7 @@ public class ReadExistingTag extends AppCompatActivity implements OnMapReadyCall
                                                     .snippet(time3+"\n"+userName)
                                             );
                                             sampleNum++;
+                                            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(stepLatLng, 11.0f));
                                         }
 //                                        trackStepsScroll = (ScrollView) findViewById(R.id.scrollView);
 //                                        ArrayAdapter<String> adapterScroll = new ArrayAdapter<String>(ReadExistingTag.this, android.R.layout.simple_selectable_list_item, trackList);
