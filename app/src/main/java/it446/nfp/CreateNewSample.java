@@ -64,9 +64,6 @@ public class CreateNewSample extends AppCompatActivity{
     private ArrayAdapter<String> adapter;
     String item[];
 
-    private String urlJsonArryPatient = "http://40.78.58.204/getlist/patient";
-    private String urlJsonArryDoctor = "http://40.78.58.204/doctor";
-    private String urlJsonArryNurse = "http://40.78.58.204/getlist/nurse";
     private static String TAG = SearchBrowse.class.getSimpleName();
     // temporary string to show the parsed response
     private String jsonResponsePatient;
@@ -241,6 +238,7 @@ public class CreateNewSample extends AppCompatActivity{
      * */
     private void makeJsonArrayRequestPatient() {
         showpDialog();
+        String urlJsonArryPatient = getResources().getString(R.string.endpoint_URL) +"/getlist/patient";
         JsonArrayRequest req = new JsonArrayRequest(urlJsonArryPatient,
                 new Response.Listener<JSONArray>() {
                     @Override
@@ -306,6 +304,7 @@ public class CreateNewSample extends AppCompatActivity{
 
     private void makeJsonArrayRequestDoctor() {
         showpDialog();
+        String urlJsonArryDoctor = getResources().getString(R.string.endpoint_URL) +"/doctor";
         JsonArrayRequest req = new JsonArrayRequest(urlJsonArryDoctor,
                 new Response.Listener<JSONArray>() {
                     @Override
@@ -360,6 +359,7 @@ public class CreateNewSample extends AppCompatActivity{
     }
     private void makeJsonArrayRequestNurse() {
         showpDialog();
+        String urlJsonArryNurse = getResources().getString(R.string.endpoint_URL) +"/getlist/nurse";
         JsonArrayRequest req = new JsonArrayRequest(urlJsonArryNurse,
                 new Response.Listener<JSONArray>() {
                     @Override

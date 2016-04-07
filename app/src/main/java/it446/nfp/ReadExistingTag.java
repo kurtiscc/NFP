@@ -91,13 +91,9 @@ public class ReadExistingTag extends AppCompatActivity implements OnMapReadyCall
     private TextView valueLastLocation;
     private String jsonResponseSample;
     private String tagUID;
-    //private ScrollView scrollViewHistory;
-    //private ImageView imageViewMap;
-    //private LinearLayout trackingHistory;
     private ProgressDialog pDialog;
     private static String TAG = SearchBrowse.class.getSimpleName();
-    private String urlJsonArryPatient = "http://40.78.58.204/getlist/patient";
-    private String urlJsonArraySample = "http://40.78.58.204/getsample/";
+
     Button scanTag;
     private boolean isToScan = false;
     PendingIntent pendingIntent;
@@ -448,6 +444,7 @@ public class ReadExistingTag extends AppCompatActivity implements OnMapReadyCall
 //    }
     private void makeJsonArrayRequestSample(String tagUID) {
         showpDialog();
+        String urlJsonArraySample = getResources().getString(R.string.endpoint_URL) +"/getsample/";
         String url = urlJsonArraySample + tagUID;
 
         JsonArrayRequest req = new JsonArrayRequest(url,

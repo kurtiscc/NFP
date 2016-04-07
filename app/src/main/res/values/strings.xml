@@ -30,6 +30,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="pick_a_category">Pick a category</string>
+    <string name="endpoint_URL">http://nfptestubuntu.westus.cloudapp.azure.com</string>
     <string-array name="scan_purpose_array">
         <item>Create</item>
         <item>Pick Up/Receive</item>

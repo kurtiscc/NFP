@@ -2,6 +2,7 @@ package it446.nfp;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
@@ -43,7 +44,7 @@ public class SearchBrowse extends AppCompatActivity{
     private ListView searchResultListView;
 
     // json array response url
-    private String urlJsonArry = "http://40.78.58.204/getlist/clinic";
+
     private static String TAG = SearchBrowse.class.getSimpleName();
     // temporary string to show the parsed response
     private String jsonResponse;
@@ -62,9 +63,6 @@ public class SearchBrowse extends AppCompatActivity{
 
         android.support.v7.widget.SearchView searchView = (android.support.v7.widget.SearchView) findViewById(R.id.search_friends);
         searchResultListView = (ListView) findViewById(R.id.search_results_list_view);
-
-
-
         pDialog = new ProgressDialog(this);
         pDialog.setMessage("Please wait...");
         pDialog.setCancelable(false);
@@ -104,6 +102,8 @@ public class SearchBrowse extends AppCompatActivity{
      * */
     private void makeJsonArrayRequest() {
         showpDialog();
+        String temp = getResources().getString(R.string.endpoint_URL);
+        String urlJsonArry = temp + "/getlist/clinic";
         JsonArrayRequest req = new JsonArrayRequest(urlJsonArry,
                 new Response.Listener<JSONArray>() {
                     @Override

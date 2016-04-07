@@ -35,8 +35,6 @@ public class ViewTagActivity extends AppCompatActivity {
     private List<TagListItem> mSearchTagList = new ArrayList<TagListItem>();
     private ListView searchResultListView;
 
-    // json array response url
-    private String urlJsonArry = "http://40.78.58.204/getlist/tag";
     private static String TAG = ViewTagActivity.class.getSimpleName();
     // temporary string to show the parsed response
     private String jsonResponse;
@@ -92,6 +90,8 @@ public class ViewTagActivity extends AppCompatActivity {
      * */
     private void makeJsonArrayRequest() {
         showpDialog();
+        // json array response url
+        String urlJsonArry = getResources().getString(R.string.endpoint_URL) + "/getlist/tag";
         JsonArrayRequest req = new JsonArrayRequest(urlJsonArry,
                 new Response.Listener<JSONArray>() {
                     @Override

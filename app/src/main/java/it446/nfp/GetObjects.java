@@ -30,11 +30,7 @@ public class GetObjects extends AppCompatActivity {
     private List<DoctorListItem> mSearchDoctorList = new ArrayList<DoctorListItem>();
     private ListView searchResultListView;
 
-
-    // json array response url
-    private static String urlJsonArry = "http://40.78.58.204/";
-    private static String urlGetDocArray = urlJsonArry+"getlist/doctor";
-    private static String TAG = ViewDoctorActivity.class.getSimpleName();
+    private String TAG = ViewDoctorActivity.class.getSimpleName();
     // temporary string to show the parsed response
     //private String jsonResponse;
 
@@ -52,7 +48,8 @@ public class GetObjects extends AppCompatActivity {
 //        showpDialog();
 
 
-
+        // json array response url
+        String urlGetDocArray = getResources().getString(R.string.endpoint_URL) +"getlist/doctor";
         JsonArrayRequest req = new JsonArrayRequest(urlGetDocArray,
                 new Response.Listener<JSONArray>() {
                     @Override

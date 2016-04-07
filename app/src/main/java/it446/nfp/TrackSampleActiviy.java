@@ -283,7 +283,7 @@ public class TrackSampleActiviy extends AppCompatActivity {
             } catch (JSONException e) {
 
             }
-            String url = "http://40.78.58.204/addtrackingstep/"+tagUID;
+            String url = getResources().getString(R.string.endpoint_URL) + "/addtrackingstep/"+tagUID;
 
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
                     url, jsonBody,

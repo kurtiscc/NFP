@@ -38,7 +38,6 @@ public class ViewDoctorActivity extends AppCompatActivity {
     private ListView searchResultListView;
 
     // json array response url
-    private String urlJsonArry = "http://40.78.58.204/getlist/doctor";
     private static String TAG = ViewDoctorActivity.class.getSimpleName();
     // temporary string to show the parsed response
     private String jsonResponse;
@@ -115,6 +114,7 @@ public class ViewDoctorActivity extends AppCompatActivity {
      * */
     private void makeJsonArrayRequest() {
         showpDialog();
+        String urlJsonArry = getResources().getString(R.string.endpoint_URL) +"/getlist/doctor";
         JsonArrayRequest req = new JsonArrayRequest(urlJsonArry,
                 new Response.Listener<JSONArray>() {
                     @Override
